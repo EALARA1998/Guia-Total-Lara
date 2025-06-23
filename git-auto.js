@@ -1,6 +1,8 @@
 import { execSync } from 'child_process';
 import readline from 'readline';
 
+const repository = 'https://github.com/EALARA1998/Guia-Total-Lara.git';
+
 // Crear interfaz de lectura para el input del usuario
 const rl = readline.createInterface({
   input: process.stdin,
@@ -10,30 +12,29 @@ const rl = readline.createInterface({
 // Función para ejecutar comandos y mostrar salida sincronizada
 function runCommand(command) {
   try {
-    const output = execSync(command, { stdio: 'inherit' });
-    return output;
+    execSync(command, { stdio: 'inherit' });
   } catch (error) {
     console.error(`❌ Error ejecutando: ${command}`);
-    process.exit(1);
+    process.exit(1); // Termina si hay error
   }
 }
 
-// Preguntar por la URL del repositorio remoto y mensaje de commit
-rl.question('🔗 Ingresa la URL del repositorio de GitHub (o deja vacío para mantener el actual): ', (url) => {
-  if (url) {
-    runCommand(`git remote set-url origin ${url}`);
-    console.log(`✅ Remoto actualizado: ${url}`);
-  }
+// Actualizar el remoto si se especifica uno
+if (repository) {
+  runCommand(`git remote set-url origin ${repository}`);
+  console.log(`✅ Remoto actualizado: ${repository}`);
+}
 
-  rl.question('📝 Escribe el mensaje del commit: ', (commitMessage) => {
-    console.log('\n🚀 Ejecutando comandos Git...\n');
+// Pedir mensaje de commit
+rl.question('📝 Escribe el mensaje del commit: ', (commitMessage) => {
+  console.log('\n🚀 Ejecutando comandos Git...\n');
 
-    runCommand('git pull origin master'); // Asegúrate de que tu rama se llama "master"
-    runCommand('git add .');
-    runCommand(`git commit -m "${commitMessage}"`);
-    runCommand('git push origin master');
+  // Ejecutar comandos git (ajusta 'master' si tu rama es diferente)
+  runCommand('git pull origin master');
+  runCommand('git add .');
+  runCommand(`git commit -m "${commitMessage}"`);
+  runCommand('git push origin master');
 
-    console.log('\n✅ ¡Cambios enviados a GitHub con éxito!');
-    rl.close();
-  });
+  console.log('\n✅ ¡Cambios enviados a GitHub con éxito!');
+  rl.close();
 });
