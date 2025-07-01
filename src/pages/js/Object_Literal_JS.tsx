@@ -187,6 +187,41 @@ export default function Object_Literal_JS() {
           const persona = { nombre, edad }; // en vez de { nombre: nombre, edad: edad }
         `}</Code>
       </section>
+      <section>
+        <h2>Destructuring</h2>
+        <Code>{`
+          const producto1 = {
+            nombre: "Tablet",
+          }
+          const { nombre } = producto1
+          `}</Code>
+        <section>
+          <h3>Destructuring de una propiedad dentro de un objeto anidado</h3>
+          <Code>{`
+            const producto1 = {
+              nombre: "Tablet",
+              direccion: {
+                calle: "7"
+              }
+            }
+            const { nombre, direccion: { calle } } = producto1
+            console.log(calle) // 7
+          `}</Code>
+        </section>
+        <section>
+          <h3>Destructuring de dos o mas objetos</h3>
+          <Code>{`
+            const producto1 = {
+              nombre: "Tablet",
+            }
+            const producto2 = {
+              nombre: "Desktop",
+            }
+            const { nombre } = producto1
+            const { nombre: nombreProducto2 } = producto2
+          `}</Code>
+        </section>
+      </section>
     </>
   )
 }

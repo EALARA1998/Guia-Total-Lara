@@ -312,6 +312,113 @@ export default function Operators_JS() {
           </tbody>
         </table>
       </section>
+      <section>
+        <h2>Evaluaciones de cortocircuito &&</h2>
+        <p>Las evaluaciones de cortocircuito en JavaScript son una forma rápida y eficiente de evaluar expresiones lógicas sin ejecutar más código del necesario.</p>
+        <section>
+          <h3>¿Qué significa "cortocircuito"?</h3>
+          <p>JavaScript evalúa expresiones de izquierda a derecha y detiene (corta) la evaluación tan pronto como el resultado se puede determinar.</p>
+        </section>
+        <section>
+          <h3>¿Dónde ocurre el cortocircuito?</h3>
+          <p>En los operadores lógicos:</p>
+          <section>
+            <h4>&& (AND lógico)</h4>
+            <Code>{`
+              condición1 && condición2
+            `}</Code>
+            <ul>
+              <li>
+                <p>Si condición1 es falsy, no evalúa condición2</p>
+              </li>
+              <li>
+                <p>Devuelve el primer falsy, o el último valor si todos son truthy</p>
+              </li>
+            </ul>
+            <Code>{`
+              false && console.log("Esto nunca se imprime");
+            `}</Code>
+            <Code>{`
+              const user = null;
+              const nombre = user && user.nombre; // devuelve null, no rompe
+            `}</Code>
+          </section>
+          <section>
+            <h4>|| (OR lógico)</h4>
+            <Code>{`
+              condición1 || condición2
+            `}</Code>
+            <ul>
+              <li>
+                <p>Si condición1 es truthy, no evalúa condición2</p>
+              </li>
+              <li>
+                <p>Devuelve el primer truthy, o el último valor si todos son falsy</p>
+              </li>
+            </ul>
+            <Code>{`
+              true || console.log("Esto nunca se imprime");
+            `}</Code>
+            <Code>{`
+              const nombre = usuario.nombre || "Invitado";
+            `}</Code>
+            <p>Esto se usa comúnmente para asignar valores por defecto.</p>
+          </section>
+          <section>
+            <h4>?? (Nullish Coalescing Operator)</h4>
+            <Code>{`
+              valor1 ?? valor2
+            `}</Code>
+            <ul>
+              <li>
+                <p>Devuelve valor1 solo si no es null ni undefined</p>
+              </li>
+              <li>
+                <p>A diferencia de ||, 0, "", false no activan el segundo valor</p>
+              </li>
+            </ul>
+            <Code>{`
+              const x = null ?? "por defecto"; // "por defecto"
+              const y = 0 ?? 100;              // 0 (porque no es null ni undefined)
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplos comunes</h4>
+            <section>
+              <h5>Render condicional en React:</h5>
+              <Code>{`
+                {usuario && <p>Hola, {usuario.nombre}</p>}
+              `}</Code>
+              <p>Si usuario es null o undefined, no se intenta renderizar.</p>
+            </section>
+            <section>
+              <h5>Valor por defecto:</h5>
+              <Code>{`
+                const nombre = input || "Sin nombre";
+              `}</Code>
+            </section>
+            <section>
+              <h5>Asignación condicional:</h5>
+              <Code>{`
+                estaAutenticado && ejecutarLogout();
+              `}</Code>
+            </section>
+          </section>
+          <section>
+            <h4>¿Qué valores son falsy en JavaScript?</h4>
+            <p>Son los que hacen que una condición falle:</p>
+            <Code>{`
+              false
+              0
+              ""
+              null
+              undefined
+              NaN
+            `}</Code>
+            <p>Todos los demás son truthy (por ejemplo: "0", [], {}, true, "hola"…).</p>
+          </section>
+        </section>
+      </section>
     </>
   )
 }

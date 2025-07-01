@@ -69,7 +69,7 @@ export default function Npm_Node() {
         `}</Code>
       </section>
       <section>
-        <h2></h2>
+        <h2>Comandos básicos de npm</h2>
         <table>
           <thead>
             <tr>
@@ -100,6 +100,13 @@ export default function Npm_Node() {
             </tr>
           </tbody>
         </table>
+      </section>
+      <section>
+        <h2>Dependencias</h2>
+        <section>
+          <h3>Sass</h3>
+          
+        </section>
       </section>
     </>
   )
