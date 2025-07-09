@@ -36,6 +36,10 @@ export default function DOM_JS() {
             <tr>
               <td>querySelector(selector)	</td>
               <td>Selecciona el primer que coincida con el selector CSS</td>
+              <Code>{`
+                const element = document.querySelector('#id')
+                const element = document.querySelector('.class')
+              `}</Code>
             </tr>
             <tr>
               <td>querySelectorAll(selector)	</td>

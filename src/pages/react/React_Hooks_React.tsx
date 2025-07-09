@@ -43,6 +43,9 @@ export default function React_Hooks_React() {
         <section>
           <h3>useEffect</h3>
           <p>Permite realizar efectos secundarios, como llamadas a APIs, subscripciones, o cambios en el DOM.</p>
+          <p>Al ejecutarse automaticamente cuando el componente esta listo, es un buen lugar para colocar codigo para consultar una API o LocalStorage.</p>
+          <p>Debido a que le podemos pasar una dependencia y estar escuchando por los cambios que sucedan en una variable, puede actualizar el componente cuando ese cambio suceda.</p>
+          <p>Dependiendo del valor que pasemos en el array de dependencias (o no pasemos nada) el hook de useEffect hara algo diferente.</p>
           <Code>{`
             useEffect(() => {
               console.log("Componente montado o actualizado");

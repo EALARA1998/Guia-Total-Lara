@@ -105,6 +105,42 @@ export default function Asinc_JS() {
             }
           `}</Code>
           <p>await pausa la ejecución hasta que la promesa se resuelva o falle.</p>
+          <Code>{`
+            const url = "https://jsonplaceholder.typicode.com/comments"
+            const consultarAPI = async () => {
+              try{
+                const response = await fetch(url)
+                if (!response.ok) {
+                  throw new Error("Hubo un error...")
+                }
+                const data = await response.json()
+                console.log(data)
+              }catch(error){
+                console.log(error)
+              }
+            }
+            consultarAPI()
+          `}</Code>
+        </section>
+        <section>
+          <h3>Multiples consultas simulataneas con Promise.all([fetch(url1), fetch(url2), fetch(url3)])</h3>
+          <Code>{`
+            const url1 = "https://jsonplaceholder.typicode.com/comments"
+            const url2 = "https://jsonplaceholder.typicode.com/albums"
+            const url3 = "https://jsonplaceholder.typicode.com/users"
+            const consultarAPI = async () => {
+              try{
+                const [response1, response2, response3] = await Promise.all([fetch(url1), fetch(url2), fetch(url3)])
+                const [data1, data2, data3] = await Promise.all([response1.json(), response2.json(), response3.json()])
+                console.log(data1)
+                console.log(data2)
+                console.log(data3)
+              }catch(error){
+                console.log(error)
+              }
+            }
+            consultarAPI()
+          `}</Code>
         </section>
         <section>
           <h3>setTimeout y setInterval</h3>
@@ -126,6 +162,24 @@ export default function Asinc_JS() {
               const datos = await respuesta.json();
               console.log(datos);
             }
+          `}</Code>
+          <Code>{`
+            const url = "https://jsonplaceholder.typicode.com/comments"
+            fetch(url)
+              .then(response => {
+                if (response.ok) {
+                  return response.json()
+                }
+                throw new Error("Hubo un error...") 
+              })
+              .then(data => {
+                for (let i = 0; i < 10; i++) {
+                  console.log(data[i]);
+                }
+              })
+              .catch(error => {
+                console.log(error)
+              })
           `}</Code>
         </section>
       </section>

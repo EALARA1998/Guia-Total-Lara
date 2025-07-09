@@ -75,15 +75,57 @@ export default function Object_Literal_JS() {
           <Code>{`
             for (let clave in persona) {
               console.log(clave, persona[clave]);
-            }
+              }
+          `}</Code>
+          <Code>{`
+            for (const clave in persona) {
+              console.log(clave, persona[clave]);
+              }
           `}</Code>
         </section>
         <section>
-          <h3>Object.keys(), Object.values(), Object.entries()</h3>
+          <h3>forEach</h3>
+          <Code>{`
+            Object.entries(persona).forEach(([clave, valor]) => {
+              console.log(clave, valor);
+            });
+          `}</Code>
+        </section>
+        <section>
+          <h3>Object.keys()</h3>
           <Code>{`
             Object.keys(persona);   // ["nombre", "edad", "nacionalidad"]
+          `}</Code>
+          <Code>{`
+            const claves = Object.keys(persona);
+
+            for (const clave of claves) {
+              const valor = persona[clave];
+              console.log(clave, valor);
+            }
+          `}</Code>
+          Es una de las formas más limpias y modernas.
+        </section>
+        <section>
+          <h3>Object.values()</h3>
+          <Code>{`
             Object.values(persona); // ["Emanuel", 26, "Hondureña"]
+            `}</Code>
+          <Code>{`
+            for (const valor of Object.values(persona)) {
+              console.log(valor);
+            }
+            `}</Code>
+        </section>
+        <section>
+          <h3>Object.entries()</h3>
+          <Code>{`
             Object.entries(persona); // [["nombre", "Emanuel"], ["edad", 26], ...]
+            `}</Code>
+          <Code>{`
+            for (const [clave, valor] of Object.entries(persona)) {
+              console.log(clave, valor);
+            }
           `}</Code>
         </section>
       </section>

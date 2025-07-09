@@ -1,6 +1,6 @@
 import Code from "../../components/Code"
 
-export default function Componentes_React() {
+export default function Components_React() {
   return (
     <>
       <h1>Componentes en React</h1>
