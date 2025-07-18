@@ -1,6 +1,4 @@
-import Code from "../../components/Code";
-
-export default function Inicio_node() {
+export default function Index_node() {
   return (
     <>
       <h1>Node.js</h1>
