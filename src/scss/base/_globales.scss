@@ -37,3 +37,37 @@ pre{
   margin: 0;
   padding: 0;
 }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 2rem;
+  background-color: #fff;
+  thead {
+    background-color: #f2f2f2;
+
+    th {
+      border: 1px solid #999;
+      padding: 10px 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-align: left;
+      vertical-align: middle;
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #fafafa;
+      }
+
+      td {
+        border: 1px solid #999;
+        padding: 10px 15px;
+        text-align: left;
+        vertical-align: middle;
+      }
+    }
+  }
+}

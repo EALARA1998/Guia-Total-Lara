@@ -46,6 +46,34 @@ pre {
   padding: 0;
 }
 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 2rem;
+  background-color: #fff;
+}
+table thead {
+  background-color: #f2f2f2;
+}
+table thead th {
+  border: 1px solid #999;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: left;
+  vertical-align: middle;
+}
+table tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+table tbody tr td {
+  border: 1px solid #999;
+  padding: 10px 15px;
+  text-align: left;
+  vertical-align: middle;
+}
+
 .navbar_menu {
   display: flex;
   list-style: none;
@@ -101,4 +129,8 @@ pre {
 }
 .navbar_menu_section:hover > .navbar_menu_section_submenu {
   display: block;
+}
+
+.content section {
+  padding: 0 0 0 1rem;
 }/*# sourceMappingURL=app.css.map */
