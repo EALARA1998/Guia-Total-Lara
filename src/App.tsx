@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "./styles/css/app.css"
 import Index from './pages/Index';
+/*Frontend*/
+import TailwindCSS_Frontend from './pages/frontend/TailwindCSS_frontend';
+/*Frontend*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
 import Async_JS from './pages/js/Async_JS';
@@ -112,6 +115,12 @@ export default function App() {
               </ul>
             </li>
             <li className='navbar_menu_section'>
+              Frontend
+              <ul className='navbar_menu_section_submenu'>
+                <li><Link to="/frontend/tailwindcss">Tailwind CSS</Link></li>
+              </ul>
+            </li>
+            <li className='navbar_menu_section'>
               English
               <ul className='navbar_menu_section_submenu'>
                 <li className='navbar_menu_section'>
@@ -173,6 +182,9 @@ export default function App() {
             {/*Git*/}
             <Route path="/git/fundamentals" element={<Fundamentals_Git />} />
             {/*Git*/}
+            {/*Frontend*/}
+            <Route path="/frontend/tailwindcss" element={<TailwindCSS_Frontend />} />
+            {/*Frontend*/}
             {/*English*/}
             {/*Easy-Grammar*/}
             <Route path="/english/easy-grammar/question-forms" element={<Question_Forms_English />} />
