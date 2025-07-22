@@ -38,6 +38,9 @@ import TypeScript_JSON from './pages/json/TypeScript_JSON';
 /*GIT*/
 import Fundamentals_Git from './pages/git/Fundamentals_Git';
 /*GIT*/
+/*Frontend*/
+import TailwindCSS_Frontend from './pages/frontend/tailwindcss_Frontend';
+/*Frontend*/
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
@@ -112,6 +115,12 @@ export default function App() {
               </ul>
             </li>
             <li className='navbar_menu_section'>
+              Frontend
+              <ul className='navbar_menu_section_submenu'>
+                <li><Link to="/frontend/tailwindcss">Tailwind CSS</Link></li>
+              </ul>
+            </li>
+            <li className='navbar_menu_section'>
               English
               <ul className='navbar_menu_section_submenu'>
                 <li className='navbar_menu_section'>
@@ -173,6 +182,9 @@ export default function App() {
             {/*Git*/}
             <Route path="/git/fundamentals" element={<Fundamentals_Git />} />
             {/*Git*/}
+            {/*Frontend*/}
+            <Route path="/frontend/tailwindcss" element={<TailwindCSS_Frontend />} />
+            {/*Frontend*/}
             {/*English*/}
             {/*Easy-Grammar*/}
             <Route path="/english/easy-grammar/question-forms" element={<Question_Forms_English />} />
