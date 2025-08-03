@@ -28,9 +28,12 @@ import Fundamentals_React from './pages/react/Fundamentals_React';
 import React_Tools_React from './pages/react/React_Tools_React';
 import Vite_React from './pages/react/Vite_React';
 import Custom_Hooks_React from './pages/react/Custom_Hooks_React';
+import UseReducer_React from './pages/react/UseReducer_React';
 /*React*/
 /*Node*/
+import Nodejs_Node from './pages/node/Nodejs_Node';
 import Npm_Node from './pages/node/Npm_Node';
+import Npm_Packages_Node from './pages/node/Npm_Packages_Node';
 /*Node*/
 /*JSON*/
 import TypeScript_JSON from './pages/json/TypeScript_JSON';
@@ -38,12 +41,15 @@ import TypeScript_JSON from './pages/json/TypeScript_JSON';
 /*GIT*/
 import Fundamentals_Git from './pages/git/Fundamentals_Git';
 /*GIT*/
-/*Frontend*/
-import TailwindCSS_Frontend from './pages/frontend/tailwindcss_Frontend';
-/*Frontend*/
+/*Bakery*/
+import Milk_Cakes_Recipes_Bakery from './pages/bakery/Milk_Cakes_Recipes_Bakery';
+import Lemon_Cakes_Recipes_Bakery from './pages/bakery/Lemon_Cakes_Recipes_Bakery';
+import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
+/*Bakery*/
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
+import Commands_VSC from './pages/vscode/Commands_VSC';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -94,12 +100,15 @@ export default function App() {
                 <li><Link to="/react/react-tools">React_Tools_React</Link></li>
                 <li><Link to="/react/vite">Vite_React</Link></li>
                 <li><Link to="/react/custom-hooks">Custom_Hooks</Link></li>
+                <li><Link to="/react/usereducer">UseReducer</Link></li>
               </ul>
             </li>
             <li className='navbar_menu_section'>
               Node
               <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/node/npm">NPM_Node</Link></li>
+                <li><Link to="/node/nodejs">NodeJS</Link></li>
+                <li><Link to="/node/npm">NPM</Link></li>
+                <li><Link to="/node/npm-packages">NPM Packages</Link></li>
               </ul>
             </li>
             <li className='navbar_menu_section'>
@@ -115,9 +124,17 @@ export default function App() {
               </ul>
             </li>
             <li className='navbar_menu_section'>
-              Frontend
+              Visual_Studio_Code
               <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/frontend/tailwindcss">Tailwind CSS</Link></li>
+                <li><Link to="/vscode/commands">Comandos</Link></li>
+              </ul>
+            </li>
+            <li className='navbar_menu_section'>
+              Bakery
+              <ul className='navbar_menu_section_submenu'>
+                <li><Link to="/bakery/milk-cakes-recipes">Milk Cakes Recipes</Link></li>
+                <li><Link to="/bakery/lemon-cakes-recipes">Lemon Cakes Recipes</Link></li>
+                <li><Link to="/bakery/jellies-recipes">Jellies Recipes</Link></li>
               </ul>
             </li>
             <li className='navbar_menu_section'>
@@ -172,19 +189,27 @@ export default function App() {
             <Route path="/react/react-tools" element={<React_Tools_React />} />
             <Route path="/react/vite" element={<Vite_React />} />
             <Route path="/react/custom-hooks" element={<Custom_Hooks_React />} />
+            <Route path="/react/usereducer" element={<UseReducer_React />} />
             {/*React*/}
             {/*Node*/}
+            <Route path="/node/nodejs" element={<Nodejs_Node />} />
             <Route path="/node/npm" element={<Npm_Node />} />
+            <Route path="/node/npm-packages" element={<Npm_Packages_Node />} />
             {/*Node*/}
             {/*Node*/}
             <Route path="/json/typescript" element={<TypeScript_JSON />} />
             {/*Node*/}
             {/*Git*/}
             <Route path="/git/fundamentals" element={<Fundamentals_Git />} />
+            {/*VSCode*/}
+            <Route path="/vscode/commands" element={<Commands_VSC />} />
+            {/*VSCode*/}
             {/*Git*/}
-            {/*Frontend*/}
-            <Route path="/frontend/tailwindcss" element={<TailwindCSS_Frontend />} />
-            {/*Frontend*/}
+            {/*Bakery*/}
+            <Route path="/bakery/milk-cakes-recipes" element={<Milk_Cakes_Recipes_Bakery />} />
+            <Route path="/bakery/lemon-cakes-recipes" element={<Lemon_Cakes_Recipes_Bakery />} />
+            <Route path="/bakery/jellies-recipes" element={<Jellies_Recipes_Bakery />} />
+            {/*Bakery*/}
             {/*English*/}
             {/*Easy-Grammar*/}
             <Route path="/english/easy-grammar/question-forms" element={<Question_Forms_English />} />

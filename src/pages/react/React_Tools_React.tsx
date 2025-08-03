@@ -1,5 +1,3 @@
-import Code from "../../components/Code";
-
 export default function React_Tools_React() {
   return (
     <>

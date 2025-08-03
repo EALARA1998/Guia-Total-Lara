@@ -64,6 +64,18 @@ export default function Fundamentals_TS() {
 
           const p: Producto = { nombre: "TV", precio: 1000 };
         `}</Code>
+        <section>
+          <h3>Herencia</h3>
+          <Code>{`
+            interface Producto {
+              nombre: string;
+              descuento?: number; // opcional
+            }
+            interface Producto2 extends Producto {
+              precio: number;
+            }
+          `}</Code>
+        </section>
       </section>
       <search>
         <h2>Funciones con tipos</h2>

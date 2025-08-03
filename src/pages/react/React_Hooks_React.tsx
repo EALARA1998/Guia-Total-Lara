@@ -39,6 +39,13 @@ export default function React_Hooks_React() {
               <p>Cada cambio re-renderiza el componente</p>
             </li>
           </ul>
+          <section>
+            <h4>Generics</h4>
+            <p>En React con TypeScript, puedes usar generics con useState para darle al hook un tipo explícito. Esto te ayuda a tener autocompletado, validación de tipos, y un código más claro y seguro.</p>
+            <Code>{`
+              const [order, setOrder] = useState<OrderItem[]>([]);
+            `}</Code>
+          </section>
         </section>
         <section>
           <h3>useEffect</h3>
