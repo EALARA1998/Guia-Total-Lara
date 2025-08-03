@@ -1,6 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import "./styles/css/app.css"
 import Index from './pages/Index';
+/*Frontend*/
+import TailwindCSS_Frontend from './pages/frontend/TailwindCSS_frontend';
+/*Frontend*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
 import Async_JS from './pages/js/Async_JS';

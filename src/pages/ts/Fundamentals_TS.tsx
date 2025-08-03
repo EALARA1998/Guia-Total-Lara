@@ -67,14 +67,17 @@ export default function Fundamentals_TS() {
         <section>
           <h3>Herencia</h3>
           <Code>{`
-            interface Producto {
-              nombre: string;
-              descuento?: number; // opcional
-            }
-            interface Producto2 extends Producto {
-              precio: number;
-            }
-          `}</Code>
+          interface Producto {
+            nombre: string;
+            precio: number;
+            descuento?: number; // opcional
+          }
+          interface Guitarra extends Producto {
+            marca: string
+          }
+
+          const g: Guitarra = { nombre: "Lucille", precio: 2000, marca: "Gibson" };
+        `}</Code>
         </section>
       </section>
       <search>
@@ -272,6 +275,26 @@ export default function Fundamentals_TS() {
           type Opcional = Partial<Usuario>;    // { nombre?: string; edad?: number; }
           type SoloNombre = Pick<Usuario, "nombre">;
         `}</Code>
+      </section>
+      <section>
+        <h2>Indexed Access Types</h2>
+        <p>En TypeScript, los Indexed Access Types (o tipos de acceso por índice) te permiten referenciar un tipo de propiedad específica de otro tipo. Son útiles para reutilizar tipos y asegurar que tus definiciones estén sincronizadas.</p>
+        <Code>{`
+          type Persona = {
+            nombre: string;
+            edad: number;
+          };
+
+          type TipoNombre = Persona["nombre"]; // string
+          type TipoEdad = Persona["edad"];     // number
+        `}</Code>
+        <section>
+          <h3>Tipos combinados con union de claves</h3>
+          <Code>{`
+            type Propiedades = Persona["nombre" | "edad"]; 
+            // string | number
+          `}</Code>
+        </section>
       </section>
       <section>
         <h2>Generics</h2>
