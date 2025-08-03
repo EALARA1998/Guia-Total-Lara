@@ -1,5 +1,4 @@
 import Code from "../../components/Code"
-import Section from "../../components/Section"
 export default function TailwindCSS_Frontend() {
   return (
     <>
