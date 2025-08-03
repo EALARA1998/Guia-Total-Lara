@@ -101,13 +101,6 @@ export default function Npm_Node() {
           </tbody>
         </table>
       </section>
-      <section>
-        <h2>Dependencias</h2>
-        <section>
-          <h3>Sass</h3>
-          
-        </section>
-      </section>
     </>
   )
 }
