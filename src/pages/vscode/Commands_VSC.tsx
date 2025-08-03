@@ -1,6 +1,4 @@
 import Code from "../../components/Code"
-import Section from "../../components/Section"
-
 type Commands_VSCProps = {
   
 }
