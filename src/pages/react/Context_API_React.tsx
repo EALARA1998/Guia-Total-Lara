@@ -60,7 +60,25 @@ export default function Context_API_React() {
           `}</Code>
         </section>
         <section>
-          <h3>Paso 3: Usa el contexto en componentes</h3>
+          <h3>Paso 3: Envolver tu app.tsx con el Provider</h3>
+          <Code>{`
+            import { StrictMode } from 'react'
+            import { createRoot } from 'react-dom/client'
+            import './index.css'
+            import App from './App.tsx'
+            import MiProvider from './contexts/MiProvider.tsx'
+
+            createRoot(document.getElementById('root')!).render(
+              <StrictMode>
+                <MiProvider>
+                  <App />
+                </MiProvider>
+              </StrictMode>,
+            )
+          `}</Code>
+        </section>
+        <section>
+          <h3>Paso 4: Usa el contexto en componentes</h3>
           <Code>{`
             import { useContext } from "react";
             import { MiContexto } from "./MiContexto";
@@ -149,6 +167,24 @@ export default function Context_API_React() {
               }
               return context;
             };
+          `}</Code>
+        </section>
+                <section>
+          <h3>Paso 3: Envolver tu app.tsx con el Provider</h3>
+          <Code>{`
+            import { StrictMode } from 'react'
+            import { createRoot } from 'react-dom/client'
+            import './index.css'
+            import App from './App.tsx'
+            import ActivityProvider from './contexts/ActivityProvider.tsx'
+
+            createRoot(document.getElementById('root')!).render(
+              <StrictMode>
+                <ActivityProvider>
+                  <App />
+                </ActivityProvider>
+              </StrictMode>,
+            )
           `}</Code>
         </section>
         <section>
