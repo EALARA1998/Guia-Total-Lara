@@ -169,7 +169,7 @@ export default function Context_API_React() {
             };
           `}</Code>
         </section>
-                <section>
+        <section>
           <h3>Paso 3: Envolver tu app.tsx con el Provider</h3>
           <Code>{`
             import { StrictMode } from 'react'
@@ -222,7 +222,64 @@ export default function Context_API_React() {
         </section>
       </section>
       <section>
-        <h2></h2>
+        <h2>¿Que pasa si hay diferentes ContextAPI?</h2>
+        <p>Si tienes varios contextos (ContextAPI), lo correcto y común es anidar los providers envolviendo tu {`<App />`}, sí, todos estarían envolviendo a App, pero no en paralelo, sino uno dentro de otro.</p>
+        <section>
+          <h3>Ejemplo con varios contextos</h3>
+          <Code>{`
+            import React from "react";
+            import ReactDOM from "react-dom/client";
+            import App from "./App";
+
+            import FirstProvider from "./context/FirstContext";
+            import SecondProvider from "./context/SecondContext";
+            import ThirdProvider from "./context/ThirdContext";
+
+            ReactDOM.createRoot(document.getElementById("root")!).render(
+              <React.StrictMode>
+                <ThirdProvider>
+                  <SecondProvider>
+                    <FirstProvider>
+                      <App />
+                    </FirstProvider>
+                  </SecondProvider>
+                </ThirdProvider>
+              </React.StrictMode>
+            );
+          `}</Code>
+        </section>
+        <section>
+          <h3>Buenas prácticas</h3>
+          <section>
+            <h4>Crear un componente AppProviders para evitar tanto anidamiento visual:</h4>
+            <Code>{`
+              export default function AppProviders({ children }: { children: React.ReactNode }) {
+              return (
+                <ThemeProvider>
+                  <UserProvider>
+                    <BudgetProvider>
+                      {children}
+                    </BudgetProvider>
+                  </UserProvider>
+                </ThemeProvider>
+              );
+            }
+            `}</Code>
+            <p>Y luego en main.tsx:</p>
+            <Code>{`
+              import AppProviders from "./context/AppProviders";
+
+              <React.StrictMode>
+                <AppProviders>
+                  <App />
+                </AppProviders>
+              </React.StrictMode>
+            `}</Code>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>Ventajas del patrón Context + useReducer</h2>
         <table>
           <thead>
             <tr>
