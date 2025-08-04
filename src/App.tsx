@@ -29,6 +29,7 @@ import React_Tools_React from './pages/react/React_Tools_React';
 import Vite_React from './pages/react/Vite_React';
 import Custom_Hooks_React from './pages/react/Custom_Hooks_React';
 import UseReducer_React from './pages/react/UseReducer_React';
+import Context_API_React from './pages/react/Context_API_React';
 /*React*/
 /*Node*/
 import Nodejs_Node from './pages/node/Nodejs_Node';
@@ -101,6 +102,7 @@ export default function App() {
                 <li><Link to="/react/vite">Vite_React</Link></li>
                 <li><Link to="/react/custom-hooks">Custom_Hooks</Link></li>
                 <li><Link to="/react/usereducer">UseReducer</Link></li>
+                <li><Link to="/react/contextapi">ContextAPI</Link></li>
               </ul>
             </li>
             <li className='navbar_menu_section'>
@@ -190,6 +192,7 @@ export default function App() {
             <Route path="/react/vite" element={<Vite_React />} />
             <Route path="/react/custom-hooks" element={<Custom_Hooks_React />} />
             <Route path="/react/usereducer" element={<UseReducer_React />} />
+            <Route path="/react/contextapi" element={<Context_API_React />} />
             {/*React*/}
             {/*Node*/}
             <Route path="/node/nodejs" element={<Nodejs_Node />} />
