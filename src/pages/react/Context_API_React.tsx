@@ -255,13 +255,13 @@ export default function Context_API_React() {
             <Code>{`
               export default function AppProviders({ children }: { children: React.ReactNode }) {
               return (
-                <ThemeProvider>
-                  <UserProvider>
-                    <BudgetProvider>
+                <ThirdProvider>
+                  <SecondProvider>
+                    <FirstProvider>
                       {children}
-                    </BudgetProvider>
-                  </UserProvider>
-                </ThemeProvider>
+                    </FirstProvider>
+                  </SecondProvider>
+                </ThirdProvider>
               );
             }
             `}</Code>
