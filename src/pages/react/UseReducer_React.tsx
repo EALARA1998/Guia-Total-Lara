@@ -1,10 +1,6 @@
 import Code from "../../components/Code"
 
-type UseReducer_ReactProps = {
-  
-}
-
-export default function UseReducer_React({}:UseReducer_ReactProps) {
+export default function UseReducer_React() {
   return (
     <>
       <h1>UseReducer</h1>
