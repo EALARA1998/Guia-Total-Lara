@@ -65,27 +65,26 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
         </section>
       </section>
       <section>
-        <h1>tailwindcss</h1>
-      <section>
-        <h2>¿Qué es Tailwind CSS?</h2>
-        <p>Tailwind CSS es un framework de CSS de utilidad que te permite construir interfaces modernas y personalizadas directamente en tu HTML, sin tener que escribir CSS desde cero. A diferencia de otros frameworks como Bootstrap que te dan componentes prediseñados, Tailwind te ofrece clases de utilidad que puedes combinar para construir tus propios diseños.</p>
-        <p>Tailwind CSS es:</p>
-        <ul>
-          <li>
-            <p>Un framework CSS basado en utilidades.</p>
-          </li>
-          <li>
-            <p>No incluye componentes visuales predefinidos como botones o tarjetas.</p>
-          </li>
-          <li>
-            <p>Te da clases pequeñas y reutilizables como flex, pt-4, text-center, bg-red-500, etc.</p>
-          </li>
-          <li>
-            <p>Fue creado por Adam Wathan y es de código abierto.</p>
-          </li>
-        </ul>
-      </section>
         <h2>tailwindcss</h2>
+        <section>
+          <h3>¿Qué es Tailwind CSS?</h3>
+          <p>Tailwind CSS es un framework de CSS de utilidad que te permite construir interfaces modernas y personalizadas directamente en tu HTML, sin tener que escribir CSS desde cero. A diferencia de otros frameworks como Bootstrap que te dan componentes prediseñados, Tailwind te ofrece clases de utilidad que puedes combinar para construir tus propios diseños.</p>
+          <p>Tailwind CSS es:</p>
+          <ul>
+            <li>
+              <p>Un framework CSS basado en utilidades.</p>
+            </li>
+            <li>
+              <p>No incluye componentes visuales predefinidos como botones o tarjetas.</p>
+            </li>
+            <li>
+              <p>Te da clases pequeñas y reutilizables como flex, pt-4, text-center, bg-red-500, etc.</p>
+            </li>
+            <li>
+              <p>Fue creado por Adam Wathan y es de código abierto.</p>
+            </li>
+          </ul>
+        </section>
         <section>
           <h3>¿Por qué usar Tailwind?</h3>
           <section>
@@ -290,6 +289,38 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
           <h3>Recursos</h3>
           <a href="https://tailwindcss.com/docs/installation/using-vite">Documentacion oficial</a>
           <a href="https://github.com/tailwindlabs/tailwindcss">GitHub</a>
+        </section>
+      </section>
+      <section>
+        <h2>react-date-picker</h2>
+        <section>
+          <h3>¿Como usar?</h3>
+          <Code>{`
+            import { useState } from 'react';
+            import 'react-date-picker/dist/DatePicker.css';
+            import 'react-calendar/dist/Calendar.css';
+            import DatePicker from 'react-date-picker';
+
+            type ValuePiece = Date | null;
+
+            type Value = ValuePiece | [ValuePiece, ValuePiece];
+
+            function MyApp() {
+              const [value, onChange] = useState<Value>(new Date());
+
+              return (
+                <div>
+                  <DatePicker onChange={onChange} value={value} />
+                </div>
+              );
+            }
+          `}</Code>
+        </section>
+        <section>
+          <h3>Instalacion</h3>
+          <Code>{`
+            npm i react-date-picker
+          `}</Code>
         </section>
       </section>
     </>
