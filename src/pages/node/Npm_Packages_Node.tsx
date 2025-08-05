@@ -44,6 +44,7 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
           <h3>Install</h3>
           <Code>{`
             npm install uuid
+            npm i --save-dev @types/uuid
             `}</Code>
         </section>
         <section>
