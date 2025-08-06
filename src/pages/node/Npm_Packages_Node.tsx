@@ -294,6 +294,7 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
       </section>
       <section>
         <h2>react-date-picker</h2>
+        <a href="https://www.npmjs.com/package/react-date-picker">react-date-picker</a>
         <section>
           <h3>¿Como usar?</h3>
           <Code>{`
@@ -322,6 +323,94 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
           <Code>{`
             npm i react-date-picker
           `}</Code>
+        </section>
+      </section>
+      <section>
+        <h2>react-swipeable-list</h2>
+        <a href="https://www.npmjs.com/package/react-swipeable-list">react-swipeable-list</a>
+        <section>
+          <h3>¿Como usar?</h3>
+          <Code>{`
+            import {
+              LeadingActions,
+              SwipeableList,
+              SwipeableListItem,
+              SwipeAction,
+              TrailingActions,
+            } from 'react-swipeable-list';
+            import 'react-swipeable-list/dist/styles.css';
+
+            const leadingActions = () => (
+              <LeadingActions>
+                <SwipeAction onClick={() => console.info('swipe action triggered')}>
+                  Action name
+                </SwipeAction>
+              </LeadingActions>
+            );
+
+            const trailingActions = () => (
+              <TrailingActions>
+                <SwipeAction
+                  destructive={true}
+                  onClick={() => console.info('swipe action triggered')}
+                >
+                  Delete
+                </SwipeAction>
+              </TrailingActions>
+            );
+
+            <SwipeableList>
+              <SwipeableListItem
+                leadingActions={leadingActions()}
+                trailingActions={trailingActions()}
+              >
+                Item content
+              </SwipeableListItem>
+            </SwipeableList>;
+          `}</Code>
+        </section>
+        <section>
+          <h3>Instalacion</h3>
+          <Code>{`
+            npm i react-swipeable-list
+
+            npm install prop-types
+          `}</Code>
+        </section>
+        <section>
+          <h3>Estilos</h3>
+          <Code>{`
+            /*** SWIPE LIST OVERRIDES **/
+            .swipeable-list-item__leading-actions, 
+            .swipeable-list-item__trailing-actions {
+              @apply text-white text-lg uppercase font-bold;
+            }
+            .swipeable-list-item__leading-actions{
+              @apply bg-blue-600;
+            }
+            .swipeable-list-item__trailing-actions {
+              @apply bg-pink-600;
+            }
+            .swipeable-list .swipe-action {
+              @apply flex justify-center items-center
+            }
+          `}</Code>
+        </section>
+      </section>
+      <section>
+        <h2>react-circular-progressbar</h2>
+        <a href="https://www.npmjs.com/package/react-circular-progressbar">react-circular-progressbar</a>
+        <section>
+          <h3>Install</h3>
+          <Code>{`
+            npm install --save react-circular-progressbar
+          `}</Code>
+        </section>
+          <h3>¿Como usar?</h3>
+          <Code>{`
+            
+          `}</Code>
+        <section>
         </section>
       </section>
     </>
