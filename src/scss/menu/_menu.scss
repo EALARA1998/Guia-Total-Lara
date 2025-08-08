@@ -1,40 +1,59 @@
-.navbar{
-  &_menu{
-    display: flex;
-    background-color: black;
-    color: white;
-    gap: 2rem;
-    &_section{
-      padding: 2rem;
-      position: relative;
+.navbar {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+
+  ul.navbar_menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &.level-0 {
+      display: flex; // menú principal horizontal
+      gap: 2rem;
+    }
+
+    &.level-1,
+    &.level-2,
+    &.level-3 {
+      position: absolute;
+      background-color: black;
       list-style: none;
-      &:hover{
-        background-color: darkblue;
-      }
-      &_submenu{
-        position: absolute;
-        display: none;
-        list-style: none;
-        background-color: black;
-        padding: 0rem;
-        top: 100%;
-        li{
-          a{
-            display: block;
-            padding: 1rem 2rem;
-            color: white;
-            text-decoration: none;
-            &:hover{
-              background-color: darkblue;
-            }
-          }
+      margin: 0;
+      padding: 0;
+      min-width: 200px;
+      display: none;
+      flex-direction: column;
+    }
+
+    &.level-1 {
+      top: 100%;
+      left: 0;
+    }
+
+    &.level-2,
+    &.level-3 {
+      top: 0;
+      left: 100%;
+    }
+
+    li.navbar_menu_section {
+      position: relative;
+
+      > a {
+        display: block;
+        padding: 1rem 2rem;
+        color: white;
+        text-decoration: none;
+        white-space: nowrap;
+
+        &:hover {
+          background-color: darkblue;
         }
       }
-      &:hover{
-        .navbar_menu_section_submenu{
-          display: flex;
-          flex-direction: column;
-        }
+
+      &:hover > ul.navbar_menu {
+        display: flex;
       }
     }
   }

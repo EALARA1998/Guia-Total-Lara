@@ -51,6 +51,7 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
 import Commands_VSC from './pages/vscode/Commands_VSC';
+import Navbar from './components/Navbar';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -58,106 +59,7 @@ export default function App() {
   return (
     <>
       <Router>
-        <nav className='navbar'>
-          <ul className='navbar_menu'>
-            <li className='navbar_menu_section'>
-              Home
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/">Home</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              JS
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/js/variables">Variables_JS</Link></li>
-                <li><Link to="/js/strings">Strings_JS</Link></li>
-                <li><Link to="/js/arrays">Arrays_JS</Link></li>
-                <li><Link to="/js/operators">Operators_JS</Link></li>
-                <li><Link to="/js/data-types">Data_Types_JS</Link></li>
-                <li><Link to="/js/object-literal">Object_Literal_JS</Link></li>
-                <li><Link to="/js/control_structures">Control_Structures_JS</Link></li>
-                <li><Link to="/js/functions">Functions_JS</Link></li>
-                <li><Link to="/js/classes">Classes_JS</Link></li>
-                <li><Link to="/js/async">Async_JS</Link></li>
-                <li><Link to="/js/dom">Dom_JS</Link></li>
-                <li><Link to="/js/ecmascript_Module">ECMAScript_Module_JS</Link></li>
-                <li><Link to="/js/performance">Performance_JS</Link></li>
-                <li><Link to="/js/json">Json_JS</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              TS
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/ts/fundamentals">Fundamentals_TS</Link></li>
-                <li><Link to="/ts/operators">Operators_TS</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              React
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/react/components">Components_React</Link></li>
-                <li><Link to="/react/react-hooks">React_Hooks_React</Link></li>
-                <li><Link to="/react/fundamentals">Fundamentals_React</Link></li>
-                <li><Link to="/react/react-tools">React_Tools_React</Link></li>
-                <li><Link to="/react/vite">Vite_React</Link></li>
-                <li><Link to="/react/custom-hooks">Custom_Hooks</Link></li>
-                <li><Link to="/react/usereducer">UseReducer</Link></li>
-                <li><Link to="/react/contextapi">ContextAPI</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              Node
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/node/nodejs">NodeJS</Link></li>
-                <li><Link to="/node/npm">NPM</Link></li>
-                <li><Link to="/node/npm-packages">NPM Packages</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              JSON
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/json/typescript">Typescript</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              Git_Github
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/git/fundamentals">Fundamentals</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              Visual_Studio_Code
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/vscode/commands">Comandos</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              Bakery
-              <ul className='navbar_menu_section_submenu'>
-                <li><Link to="/bakery/milk-cakes-recipes">Milk Cakes Recipes</Link></li>
-                <li><Link to="/bakery/lemon-cakes-recipes">Lemon Cakes Recipes</Link></li>
-                <li><Link to="/bakery/jellies-recipes">Jellies Recipes</Link></li>
-              </ul>
-            </li>
-            <li className='navbar_menu_section'>
-              English
-              <ul className='navbar_menu_section_submenu'>
-                <li className='navbar_menu_section'>
-                  Grammar (Easy)
-                  <ul className="navbar_menu_section_submenu navbar_menu_section_submenu--nested">
-                    <li><Link to="/english/easy-grammar/question-forms">Question Forms</Link></li>
-                  </ul>
-                </li>
-                <li>
-                  Grammar (Medium)
-                  <ul className="navbar_menu_section_submenu navbar_menu_section_submenu--nested">
-                    <li><Link to="/english/easy-grammar/question-forms">Question Forms</Link></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
+        <Navbar/>
         <section className='content'>
           <Routes>
             {/* ToDo Para rutas que no existan <Route path="*" element={<NotFound />} />*/}
