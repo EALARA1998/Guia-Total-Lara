@@ -125,8 +125,8 @@ type MenuProps = {
 function Menu({ items, level = 0 }: MenuProps) {
   return (
     <ul className={`navbar_menu level-${level}`}>
-      {items.map((item) => (
-        <li key={item.path} className="navbar_menu_section">
+      {items.map((item, i) => (
+        <li key={i} className="navbar_menu_section">
           <Link to={item.path}>{item.label}</Link>
           {item.children && item.children.length > 0 && (
             <Menu items={item.children} level={level + 1} />
