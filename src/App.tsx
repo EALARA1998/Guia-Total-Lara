@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import "./styles/css/app.css"
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import "./styles/css/app.css";
 import Index from './pages/Index';
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
