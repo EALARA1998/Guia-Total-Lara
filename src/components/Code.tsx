@@ -28,14 +28,15 @@ function dedent(text: string) {
   return lines.map(line => line.slice(indent)).join('\n');
 }
 
-function Code({ children, language = 'javascript' }: Props) {
+export default function Code({ children, language = 'javascript' }: Props) {
   const formatted = dedent(children);
 
   return (
-    <SyntaxHighlighter language={language} style={dracula} customStyle={{ borderRadius: '6px', fontSize: '14px' }}>
+    <SyntaxHighlighter
+      className="code"
+      language={language}
+      style={dracula}>
       {formatted}
     </SyntaxHighlighter>
   );
 }
-
-export default Code;

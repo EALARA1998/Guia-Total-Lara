@@ -1,60 +1,40 @@
-@mixin LinkHoverColor(){
-  transition: background-color 0.3s ease;
-  &:hover{
-    background-color: darkblue;
-  }
-} 
-.navbar {
-  &_menu {
+.navbar{
+  &_menu{
     display: flex;
-    list-style: none;
-    background-color: #333;
-    padding: 10px;
-    gap: 20px;
-    a {
-      color: white;
-      text-decoration: none;
-    }
-    &_section {
+    background-color: black;
+    color: white;
+    gap: 2rem;
+    &_section{
+      padding: 2rem;
       position: relative;
-      color: white;
-      cursor: pointer;
-      &_submenu {
-        display: none;
+      list-style: none;
+      &:hover{
+        background-color: darkblue;
+      }
+      &_submenu{
         position: absolute;
-        background-color: #444;
-        top: 100%;
-        left: 0;
+        display: none;
         list-style: none;
-        padding: 0;
-        margin: 0;
-        z-index: 10;
-        // Submenú anidado
-        &--nested {
-          display: none;
-          position: absolute;
-          top: 0;
-          left: 100%;
-          background-color: #555;
-          min-width: 200px;
-          padding: 0;
-          margin: 0;
-          z-index: 20;
-          @include LinkHoverColor();
-        }
-        li {
-          position: relative;
-          padding: 10px 20px;
-          @include LinkHoverColor();
-          // Mostrar submenú anidado solo cuando se hace hover sobre el li
-          &:hover .navbar_menu_section_submenu--nested {
+        background-color: black;
+        padding: 0rem;
+        top: 100%;
+        li{
+          a{
             display: block;
+            padding: 1rem 2rem;
+            color: white;
+            text-decoration: none;
+            &:hover{
+              background-color: darkblue;
+            }
           }
         }
       }
-      // Mostrar el primer nivel al hacer hover sobre la sección principal
-      &:hover > .navbar_menu_section_submenu {
-        display: block;
+      &:hover{
+        .navbar_menu_section_submenu{
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }

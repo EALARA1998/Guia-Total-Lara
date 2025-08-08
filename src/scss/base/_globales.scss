@@ -1,3 +1,4 @@
+@use "./mixins" as *;
 html {
   font-family: 'Courier New', Courier, monospace;
   font-size: 62.5%;
@@ -17,25 +18,61 @@ nav{
   }
 }
 h1{
-  font-size: 3rem;
+  text-transform: uppercase;
+  font-size: GetFontSize("mobile","h1");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h1");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h1");
+  }
 }
 h2{
-  font-size: 2.5rem;
+  font-size: GetFontSize("mobile","h2");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h2");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h2");
+  }
 }
 h3{
-  font-size: 2rem;
+  font-size: GetFontSize("mobile","h3");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h3");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h3");
+  }
 }
 h4{
-  font-size: 1.8rem;
+  font-size: GetFontSize("mobile","h4");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h4");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h4");
+  }
 }
 p{
-  font-size: 1.6rem;
+  font-size: GetFontSize("mobile","p");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","p");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","p");
+  }
 }
-code{
-  margin: 0;
-  padding: 0;
-  font-family: 'Fira Code', 'Consolas', 'Courier New', monospace;
+.code{
+  font-size: GetFontSize("mobile","p");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","p");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","p");
+  }
 }
+
 pre{
   margin: 0;
   padding: 0;

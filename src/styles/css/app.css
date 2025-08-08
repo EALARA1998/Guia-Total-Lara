@@ -20,29 +20,88 @@ nav li {
 }
 
 h1 {
-  font-size: 3rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 1280px) {
+  h1 {
+    font-size: 3.92rem;
+  }
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 1.7rem;
+}
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 2.38rem;
+  }
+}
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 3.332rem;
+  }
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.445rem;
+}
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 2.023rem;
+  }
+}
+@media (min-width: 1280px) {
+  h3 {
+    font-size: 2.8322rem;
+  }
 }
 
 h4 {
-  font-size: 1.8rem;
+  font-size: 1.22825rem;
+}
+@media (min-width: 1024px) {
+  h4 {
+    font-size: 1.71955rem;
+  }
+}
+@media (min-width: 1280px) {
+  h4 {
+    font-size: 2.40737rem;
+  }
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1.22825rem;
+}
+@media (min-width: 1024px) {
+  p {
+    font-size: 1.71955rem;
+  }
+}
+@media (min-width: 1280px) {
+  p {
+    font-size: 2.40737rem;
+  }
 }
 
-code {
-  margin: 0;
-  padding: 0;
-  font-family: "Fira Code", "Consolas", "Courier New", monospace;
+.code {
+  font-size: 1.22825rem;
+}
+@media (min-width: 1024px) {
+  .code {
+    font-size: 1.71955rem;
+  }
+}
+@media (min-width: 1280px) {
+  .code {
+    font-size: 2.40737rem;
+  }
 }
 
 pre {
@@ -80,59 +139,38 @@ table tbody tr td {
 
 .navbar_menu {
   display: flex;
-  list-style: none;
-  background-color: #333;
-  padding: 10px;
-  gap: 20px;
+  background-color: black;
+  color: white;
+  gap: 2rem;
 }
-.navbar_menu a {
+.navbar_menu_section {
+  padding: 2rem;
+  position: relative;
+  list-style: none;
+}
+.navbar_menu_section:hover {
+  background-color: darkblue;
+}
+.navbar_menu_section_submenu {
+  position: absolute;
+  display: none;
+  list-style: none;
+  background-color: black;
+  padding: 0rem;
+  top: 100%;
+}
+.navbar_menu_section_submenu li a {
+  display: block;
+  padding: 1rem 2rem;
   color: white;
   text-decoration: none;
 }
-.navbar_menu_section {
-  position: relative;
-  color: white;
-  cursor: pointer;
-}
-.navbar_menu_section_submenu {
-  display: none;
-  position: absolute;
-  background-color: #444;
-  top: 100%;
-  left: 0;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  z-index: 10;
-}
-.navbar_menu_section_submenu--nested {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #555;
-  min-width: 200px;
-  padding: 0;
-  margin: 0;
-  z-index: 20;
-  transition: background-color 0.3s ease;
-}
-.navbar_menu_section_submenu--nested:hover {
+.navbar_menu_section_submenu li a:hover {
   background-color: darkblue;
 }
-.navbar_menu_section_submenu li {
-  position: relative;
-  padding: 10px 20px;
-  transition: background-color 0.3s ease;
-}
-.navbar_menu_section_submenu li:hover {
-  background-color: darkblue;
-}
-.navbar_menu_section_submenu li:hover .navbar_menu_section_submenu--nested {
-  display: block;
-}
-.navbar_menu_section:hover > .navbar_menu_section_submenu {
-  display: block;
+.navbar_menu_section:hover .navbar_menu_section_submenu {
+  display: flex;
+  flex-direction: column;
 }
 
 .content section {
