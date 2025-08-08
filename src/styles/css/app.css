@@ -90,16 +90,16 @@ p {
   }
 }
 
-.code {
+a {
   font-size: 1.22825rem;
 }
 @media (min-width: 1024px) {
-  .code {
+  a {
     font-size: 1.71955rem;
   }
 }
 @media (min-width: 1280px) {
-  .code {
+  a {
     font-size: 2.40737rem;
   }
 }

@@ -63,13 +63,13 @@ p{
     font-size: GetFontSize("desktop","p");
   }
 }
-.code{
-  font-size: GetFontSize("mobile","p");
+a{
+  font-size: GetFontSize("mobile","h4");
   @include Tablet(){
-    font-size: GetFontSize("tablet","p");
+    font-size: GetFontSize("tablet","h4");
   }
   @include Desktop(){
-    font-size: GetFontSize("desktop","p");
+    font-size: GetFontSize("desktop","h4");
   }
 }
 
