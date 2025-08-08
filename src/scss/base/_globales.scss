@@ -72,7 +72,15 @@ a{
     font-size: GetFontSize("desktop","h4");
   }
 }
-
+.code{
+  font-size: GetFontSize("mobile","p");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","p");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","p");
+  }
+}
 pre{
   margin: 0;
   padding: 0;

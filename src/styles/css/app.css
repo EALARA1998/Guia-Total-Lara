@@ -104,6 +104,20 @@ a {
   }
 }
 
+.code {
+  font-size: 1.22825rem;
+}
+@media (min-width: 1024px) {
+  .code {
+    font-size: 1.71955rem;
+  }
+}
+@media (min-width: 1280px) {
+  .code {
+    font-size: 2.40737rem;
+  }
+}
+
 pre {
   margin: 0;
   padding: 0;
