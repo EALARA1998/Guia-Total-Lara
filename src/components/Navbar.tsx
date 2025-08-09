@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 type MenuItem = {
   label: string;
   path: string;
   children?: MenuItem[];
+}
+type MenuProps = {
+  items: MenuItem[]
+  level?: number
 }
 
 const menuItems: MenuItem[] = [
@@ -117,18 +122,35 @@ const menuItems: MenuItem[] = [
   },
 ];
 
-type MenuProps = {
-  items: MenuItem[]
-  level?: number
-}
-
 function Menu({ items, level = 0 }: MenuProps) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleMenu = (i: number) => {
+    setOpenIndex(openIndex === i ? null : i);
+  };
+
   return (
     <ul className={`navbar_menu level-${level}`}>
       {items.map((item, i) => (
-        <li key={i} className="navbar_menu_section">
-          <Link to={item.path}>{item.label}</Link>
-          {item.children && item.children.length > 0 && (
+        <li
+          key={i}
+          className={`navbar_menu_section ${openIndex === i ? "open" : ""}`}
+        >
+          <Link
+            to={item.path}
+            className={openIndex === i ? "open" : ""}
+            onClick={(e) => {
+              if (item.children) {
+                e.preventDefault();
+                toggleMenu(i);
+              }
+            }}
+          >
+            {item.label}
+          </Link>
+
+          {/* Recursivamente renderizamos submenú sólo si está abierto */}
+          {item.children && openIndex === i && (
             <Menu items={item.children} level={level + 1} />
           )}
         </li>
