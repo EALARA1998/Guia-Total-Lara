@@ -3,7 +3,11 @@ import "./styles/css/app.css";
 import Index from './pages/Index';
 import Navbar from './components/Navbar';
 /*CSS*/
-import Selectors_CSS from './pages/css/Selectors_Css';
+import Selectors_CSS from './pages/css/Selectors_CSS';
+import Specificity_Inheritance_CSS from './pages/css/Specificity_Inheritance_CSS';
+import Colors_Units_Measurements_CSS from './pages/css/Colors_Units_Measurements_CSS';
+import Box_Model_CSS from './pages/css/Box_Model_CSS';
+import Display_Flow_CSS from './pages/css/Display_Flow_CSS';
 /*CSS*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
@@ -59,10 +63,6 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
-import Specificity_Inheritance_CSS from './pages/css/Specificity_Inheritance_CSS';
-import Colors_Units_Measurements_CSS from './pages/css/Colors_Units_Measurements_CSS';
-import Box_Model_CSS from './pages/css/Box_Model_CSS';
-import Display_Flow_CSS from './pages/css/Display_Flow_CSS';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
