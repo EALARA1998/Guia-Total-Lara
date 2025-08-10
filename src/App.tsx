@@ -1,6 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./styles/css/app.css";
 import Index from './pages/Index';
+import Navbar from './components/Navbar';
+/*CSS*/
+import Selectors_CSS from './pages/css/Selectors_Css';
+/*CSS*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
 import Async_JS from './pages/js/Async_JS';
@@ -26,7 +30,6 @@ import Components_React from './pages/react/Components_React';
 import React_Hooks_React from './pages/react/React_Hooks_React';
 import Fundamentals_React from './pages/react/Fundamentals_React';
 import React_Tools_React from './pages/react/React_Tools_React';
-import Vite_React from './pages/react/Vite_React';
 import Custom_Hooks_React from './pages/react/Custom_Hooks_React';
 import UseReducer_React from './pages/react/UseReducer_React';
 import Context_API_React from './pages/react/Context_API_React';
@@ -39,9 +42,15 @@ import Npm_Packages_Node from './pages/node/Npm_Packages_Node';
 /*JSON*/
 import TypeScript_JSON from './pages/json/TypeScript_JSON';
 /*JSON*/
+/*Frontend*/
+import Vite_Frontend from './pages/frontend/Vite_Frontend';
+/*Frontend*/
 /*GIT*/
 import Fundamentals_Git from './pages/git/Fundamentals_Git';
 /*GIT*/
+/*VSC*/
+import Commands_VSC from './pages/vscode/Commands_VSC';
+/*VSC*/
 /*Bakery*/
 import Milk_Cakes_Recipes_Bakery from './pages/bakery/Milk_Cakes_Recipes_Bakery';
 import Lemon_Cakes_Recipes_Bakery from './pages/bakery/Lemon_Cakes_Recipes_Bakery';
@@ -50,8 +59,10 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
-import Commands_VSC from './pages/vscode/Commands_VSC';
-import Navbar from './components/Navbar';
+import Specificity_Inheritance_CSS from './pages/css/Specificity_Inheritance_CSS';
+import Colors_Units_Measurements_CSS from './pages/css/Colors_Units_Measurements_CSS';
+import Box_Model_CSS from './pages/css/Box_Model_CSS';
+import Display_Flow_CSS from './pages/css/Display_Flow_CSS';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -66,6 +77,13 @@ export default function App() {
             {/*Index*/}
             <Route path="/" element={<Index />} />
             {/*Index*/}
+            {/*CSS*/}
+            <Route path="/css/selectors" element={<Selectors_CSS />} />
+            <Route path="/css/specificity-inheritance" element={<Specificity_Inheritance_CSS />} />
+            <Route path="/css/colors-units-measurements" element={<Colors_Units_Measurements_CSS />} />
+            <Route path="/css/box-model" element={<Box_Model_CSS />} />
+            <Route path="/css/display-flow" element={<Display_Flow_CSS />} />
+            {/*CSS*/}
             {/*JS*/}
             <Route path="/js/variables" element={<Variables_JS />} />
             <Route path="/js/strings" element={<Strings_JS />} />
@@ -91,7 +109,6 @@ export default function App() {
             <Route path="/react/react-hooks" element={<React_Hooks_React />} />
             <Route path="/react/fundamentals" element={<Fundamentals_React />} />
             <Route path="/react/react-tools" element={<React_Tools_React />} />
-            <Route path="/react/vite" element={<Vite_React />} />
             <Route path="/react/custom-hooks" element={<Custom_Hooks_React />} />
             <Route path="/react/usereducer" element={<UseReducer_React />} />
             <Route path="/react/contextapi" element={<Context_API_React />} />
@@ -101,9 +118,12 @@ export default function App() {
             <Route path="/node/npm" element={<Npm_Node />} />
             <Route path="/node/npm-packages" element={<Npm_Packages_Node />} />
             {/*Node*/}
-            {/*Node*/}
+            {/*Json*/}
             <Route path="/json/typescript" element={<TypeScript_JSON />} />
-            {/*Node*/}
+            {/*Json*/}
+            {/*Frontend*/}
+            <Route path="/frontend/vite" element={<Vite_Frontend />} />
+            {/*Frontend*/}
             {/*Git*/}
             <Route path="/git/fundamentals" element={<Fundamentals_Git />} />
             {/*VSCode*/}

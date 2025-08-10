@@ -1,9 +1,10 @@
 import Code from "../../components/Code";
 
-export default function NombrePagina() {
+export default function Vite_Frontend() {
   return (
     <>
       <h1>Vite</h1>
+      <a href="https://es.vite.dev/">Vite</a>
       <p>Vite, una herramienta moderna para el desarrollo frontend que ha ganado mucha popularidad por su rendimiento y simplicidad.</p>
       <section>
         <h2>¿Qué es Vite?</h2>

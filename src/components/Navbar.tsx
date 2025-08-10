@@ -20,6 +20,17 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
+    label: "CSS",
+    path: "/css",
+    children: [
+      { label: "Selectors", path: "/css/selectors" },
+      { label: "Specificity_Inheritance", path: "/css/specificity-inheritance" },
+      { label: "Colors_Units_Measurements", path: "/css/colors-units-measurements" },
+      { label: "Box_Model", path: "/css/box-model" },
+      { label: "Display_Flow", path: "/css/display-flow" },
+    ],
+  },
+  {
     label: "JS",
     path: "/js",
     children: [
@@ -75,6 +86,13 @@ const menuItems: MenuItem[] = [
     path: "/json",
     children: [
       { label: "Typescript", path: "/json/typescript" },
+    ],
+  },
+  {
+    label: "Frontend",
+    path: "/frontend",
+    children: [
+      { label: "Vite", path: "/frontend/vite" },
     ],
   },
   {

@@ -76,6 +76,34 @@ h4 {
   }
 }
 
+h5 {
+  font-size: 1.0440125rem;
+}
+@media (min-width: 1024px) {
+  h5 {
+    font-size: 1.4616175rem;
+  }
+}
+@media (min-width: 1280px) {
+  h5 {
+    font-size: 2.0462645rem;
+  }
+}
+
+h6 {
+  font-size: 0.887410625rem;
+}
+@media (min-width: 1024px) {
+  h6 {
+    font-size: 1.242374875rem;
+  }
+}
+@media (min-width: 1280px) {
+  h6 {
+    font-size: 1.739324825rem;
+  }
+}
+
 p {
   font-size: 1.22825rem;
 }
@@ -86,6 +114,20 @@ p {
 }
 @media (min-width: 1280px) {
   p {
+    font-size: 2.40737rem;
+  }
+}
+
+li {
+  font-size: 1.22825rem;
+}
+@media (min-width: 1024px) {
+  li {
+    font-size: 1.71955rem;
+  }
+}
+@media (min-width: 1280px) {
+  li {
     font-size: 2.40737rem;
   }
 }

@@ -33,6 +33,8 @@
       @return MultiplyByPercentage($fontSize, .15, 3);
     }@else if $font=="h5" {
       @return MultiplyByPercentage($fontSize, .15, 4);
+    }@else if $font=="h6" {
+      @return MultiplyByPercentage($fontSize, .15, 5);
     }
   }
   $fontSize: $fontSize*.40+$fontSize;
@@ -47,6 +49,8 @@
       @return MultiplyByPercentage($fontSize, .15, 3);
     }@else if $font=="h5" {
       @return MultiplyByPercentage($fontSize, .15, 4);
+    }@else if $font=="h6" {
+      @return MultiplyByPercentage($fontSize, .15, 5);
     }
   }
   $fontSize: $fontSize*.40+$fontSize;
@@ -61,6 +65,8 @@
       @return MultiplyByPercentage($fontSize, .15, 3);
     }@else if $font=="h5" {
       @return MultiplyByPercentage($fontSize, .15, 4);
+    }@else if $font=="h6" {
+      @return MultiplyByPercentage($fontSize, .15, 5);
     }
   }
 }

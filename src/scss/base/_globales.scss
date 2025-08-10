@@ -54,7 +54,34 @@ h4{
     font-size: GetFontSize("desktop","h4");
   }
 }
+h5{
+  font-size: GetFontSize("mobile","h5");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h5");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h5");
+  }
+}
+h6{
+  font-size: GetFontSize("mobile","h6");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h6");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h6");
+  }
+}
 p{
+  font-size: GetFontSize("mobile","p");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","p");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","p");
+  }
+}
+li{
   font-size: GetFontSize("mobile","p");
   @include Tablet(){
     font-size: GetFontSize("tablet","p");
