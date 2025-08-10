@@ -38,15 +38,24 @@
 
       li a {
         background-color: color.adjust(black, $lightness: 20%);
+        &.open {
+          background-color: color.adjust(black, $lightness: 30%);
+        }
+        &:hover{
+          background-color: color.adjust(black, $lightness: 30%);
+        }
       }
     }
-
+    
     &.level-2 {
       top: 0;
       left: 100%;
-
+      
       li a {
         background-color: color.adjust(black, $lightness: 40%);
+        &:hover{
+          background-color: color.adjust(black, $lightness: 50%);
+        }
       }
     }
 
@@ -70,7 +79,7 @@
       transition: background-color 0.3s ease;
 
       &.open {
-        background-color: darkblue;
+        background-color: color.adjust(black, $lightness: 10%);
       }
 
       &:hover {

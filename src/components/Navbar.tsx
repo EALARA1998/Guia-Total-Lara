@@ -125,8 +125,8 @@ const menuItems: MenuItem[] = [
 function Menu({ items, level = 0 }: MenuProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const toggleMenu = (i: number) => {
-    setOpenIndex(openIndex === i ? null : i);
+  const toggleMenu = (i: number | null) => {
+    setOpenIndex((openIndex === i)  ? null : i);
   };
 
   return (

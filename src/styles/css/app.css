@@ -187,12 +187,21 @@ table tbody tr td {
 .navbar ul.navbar_menu.level-1 li a {
   background-color: #333333;
 }
+.navbar ul.navbar_menu.level-1 li a.open {
+  background-color: rgb(76.5, 76.5, 76.5);
+}
+.navbar ul.navbar_menu.level-1 li a:hover {
+  background-color: rgb(76.5, 76.5, 76.5);
+}
 .navbar ul.navbar_menu.level-2 {
   top: 0;
   left: 100%;
 }
 .navbar ul.navbar_menu.level-2 li a {
   background-color: #666666;
+}
+.navbar ul.navbar_menu.level-2 li a:hover {
+  background-color: rgb(127.5, 127.5, 127.5);
 }
 .navbar ul.navbar_menu.level-3 {
   top: 0;
@@ -212,7 +221,7 @@ table tbody tr td {
   transition: background-color 0.3s ease;
 }
 .navbar li.navbar_menu_section > a.open {
-  background-color: darkblue;
+  background-color: rgb(25.5, 25.5, 25.5);
 }
 .navbar li.navbar_menu_section > a:hover {
   background-color: rgb(25.5, 25.5, 25.5);
