@@ -42,12 +42,12 @@ h1 {
 }
 @media (min-width: 1024px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3.75rem;
   }
 }
 @media (min-width: 1280px) {
   h1 {
-    font-size: 5rem;
+    font-size: 3.75rem;
   }
 }
 
@@ -56,12 +56,12 @@ h2 {
 }
 @media (min-width: 1024px) {
   h2 {
-    font-size: 4.5rem;
+    font-size: 3.375rem;
   }
 }
 @media (min-width: 1280px) {
   h2 {
-    font-size: 4.5rem;
+    font-size: 3.375rem;
   }
 }
 
@@ -70,12 +70,12 @@ h3 {
 }
 @media (min-width: 1024px) {
   h3 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1280px) {
   h3 {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 
@@ -84,12 +84,12 @@ h4 {
 }
 @media (min-width: 1024px) {
   h4 {
-    font-size: 3.5rem;
+    font-size: 2.625rem;
   }
 }
 @media (min-width: 1280px) {
   h4 {
-    font-size: 3.5rem;
+    font-size: 2.625rem;
   }
 }
 
@@ -98,12 +98,12 @@ h5 {
 }
 @media (min-width: 1024px) {
   h5 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   h5 {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -112,12 +112,12 @@ h6 {
 }
 @media (min-width: 1024px) {
   h6 {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
 }
 @media (min-width: 1280px) {
   h6 {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -126,12 +126,12 @@ p {
 }
 @media (min-width: 1024px) {
   p {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   p {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -140,12 +140,12 @@ li {
 }
 @media (min-width: 1024px) {
   li {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   li {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -169,12 +169,12 @@ a:hover {
 }
 @media (min-width: 1024px) {
   a {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   a {
-    font-size: 3rem;
+    font-size: 2.25rem;
   }
 }
 
@@ -184,12 +184,12 @@ a:hover {
 }
 @media (min-width: 1024px) {
   .code {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
 }
 @media (min-width: 1280px) {
   .code {
-    font-size: 2.5rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -241,12 +241,12 @@ table tbody tr td {
 }
 @media (min-width: 1024px) {
   .navbar a {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 @media (min-width: 1280px) {
   .navbar a {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 }
 .navbar ul.navbar_menu {

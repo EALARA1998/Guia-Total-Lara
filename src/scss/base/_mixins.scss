@@ -37,7 +37,7 @@
       @return $fontSize * .5;
     }
   }
-  $fontSize: $fontSize*2;
+  $fontSize: $fontSize*1.5;
   @if $screen=="tablet" {
     @if $font=="h1" {
       @return $fontSize;
