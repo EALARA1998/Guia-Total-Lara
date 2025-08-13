@@ -28,6 +28,12 @@ const menuItems: MenuItem[] = [
       { label: "Colors_Units_Measurements", path: "/css/colors-units-measurements" },
       { label: "Box_Model", path: "/css/box-model" },
       { label: "Display_Flow", path: "/css/display-flow" },
+      { label: "Position_Z-Index", path: "/css/position-zindex" },
+      { label: "Backgrounds_Borders", path: "/css/backgrounds-borders" },
+      { label: "Typography_Text", path: "/css/typography-text" },
+      { label: "Advanced_Design", path: "/css/advanced-design" },
+      { label: "Transitions_Transformations_Animations", path: "/css/transitions-transformations-animations" },
+      { label: "Functions_Variables_Organization", path: "/css/functions-variables-organization" },
     ],
   },
   {

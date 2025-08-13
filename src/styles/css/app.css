@@ -1,5 +1,6 @@
 html {
   font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-padding-top: 0rem;
@@ -19,6 +20,10 @@ nav li {
   font-size: 2rem;
 }
 
+h1, h2, h3, h4, h5, h6, p, li, a {
+  letter-spacing: 0.05em;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 2rem;
@@ -35,128 +40,129 @@ h1 {
 }
 
 h2 {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
 }
 @media (min-width: 1024px) {
   h2 {
-    font-size: 2.38rem;
+    font-size: 2.52rem;
   }
 }
 @media (min-width: 1280px) {
   h2 {
-    font-size: 3.332rem;
+    font-size: 3.528rem;
   }
 }
 
 h3 {
-  font-size: 1.445rem;
+  font-size: 1.62rem;
 }
 @media (min-width: 1024px) {
   h3 {
-    font-size: 2.023rem;
+    font-size: 2.268rem;
   }
 }
 @media (min-width: 1280px) {
   h3 {
-    font-size: 2.8322rem;
+    font-size: 3.1752rem;
   }
 }
 
 h4 {
-  font-size: 1.22825rem;
+  font-size: 1.458rem;
 }
 @media (min-width: 1024px) {
   h4 {
-    font-size: 1.71955rem;
+    font-size: 2.0412rem;
   }
 }
 @media (min-width: 1280px) {
   h4 {
-    font-size: 2.40737rem;
+    font-size: 2.85768rem;
   }
 }
 
 h5 {
-  font-size: 1.0440125rem;
+  font-size: 1.3122rem;
 }
 @media (min-width: 1024px) {
   h5 {
-    font-size: 1.4616175rem;
+    font-size: 1.83708rem;
   }
 }
 @media (min-width: 1280px) {
   h5 {
-    font-size: 2.0462645rem;
+    font-size: 2.571912rem;
   }
 }
 
 h6 {
-  font-size: 0.887410625rem;
+  font-size: 1.18098rem;
 }
 @media (min-width: 1024px) {
   h6 {
-    font-size: 1.242374875rem;
+    font-size: 1.653372rem;
   }
 }
 @media (min-width: 1280px) {
   h6 {
-    font-size: 1.739324825rem;
+    font-size: 2.3147208rem;
   }
 }
 
 p {
-  font-size: 1.22825rem;
+  font-size: 1.3122rem;
 }
 @media (min-width: 1024px) {
   p {
-    font-size: 1.71955rem;
+    font-size: 1.83708rem;
   }
 }
 @media (min-width: 1280px) {
   p {
-    font-size: 2.40737rem;
+    font-size: 2.571912rem;
   }
 }
 
 li {
-  font-size: 1.22825rem;
+  font-size: 1.3122rem;
 }
 @media (min-width: 1024px) {
   li {
-    font-size: 1.71955rem;
+    font-size: 1.83708rem;
   }
 }
 @media (min-width: 1280px) {
   li {
-    font-size: 2.40737rem;
+    font-size: 2.571912rem;
   }
 }
 
 a {
-  font-size: 1.22825rem;
+  font-size: 1.458rem;
 }
 @media (min-width: 1024px) {
   a {
-    font-size: 1.71955rem;
+    font-size: 2.0412rem;
   }
 }
 @media (min-width: 1280px) {
   a {
-    font-size: 2.40737rem;
+    font-size: 2.85768rem;
   }
 }
 
 .code {
-  font-size: 1.22825rem;
+  font-variant: normal;
+  font-size: 1.18098rem;
 }
 @media (min-width: 1024px) {
   .code {
-    font-size: 1.71955rem;
+    font-size: 1.653372rem;
   }
 }
 @media (min-width: 1280px) {
   .code {
-    font-size: 2.40737rem;
+    font-size: 2.3147208rem;
   }
 }
 

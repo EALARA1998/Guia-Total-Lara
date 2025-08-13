@@ -1,6 +1,7 @@
 @use "./mixins" as *;
 html {
   font-family: 'Courier New', Courier, monospace;
+  font-variant: small-caps;
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-padding-top: 0rem;
@@ -9,13 +10,16 @@ html {
 *, 
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 nav{
   display: flex;
   li{
     font-size: 2rem;
   }
+}
+h1, h2, h3, h4, h5, h6, p, li, a{
+  letter-spacing: 0.05em;
 }
 h1{
   text-transform: uppercase;
@@ -100,12 +104,13 @@ a{
   }
 }
 .code{
-  font-size: GetFontSize("mobile","p");
+  font-variant: normal;
+  font-size: GetFontSize("mobile","code");
   @include Tablet(){
-    font-size: GetFontSize("tablet","p");
+    font-size: GetFontSize("tablet","code");
   }
   @include Desktop(){
-    font-size: GetFontSize("desktop","p");
+    font-size: GetFontSize("desktop","code");
   }
 }
 pre{

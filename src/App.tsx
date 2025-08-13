@@ -8,6 +8,10 @@ import Specificity_Inheritance_CSS from './pages/css/Specificity_Inheritance_CSS
 import Colors_Units_Measurements_CSS from './pages/css/Colors_Units_Measurements_CSS';
 import Box_Model_CSS from './pages/css/Box_Model_CSS';
 import Display_Flow_CSS from './pages/css/Display_Flow_CSS';
+import Position_ZIndex_CSS from './pages/css/Position_ZIndex_CSS';
+import Backgrounds_Borders_CSS from './pages/css/Backgrounds_Borders_CSS';
+import Typography_Text_CSS from './pages/css/Typography_Text_CSS';
+import Advanced_Design_CSS from './pages/css/Advanced_Design_CSS';
 /*CSS*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
@@ -63,6 +67,8 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
+import Transitions_Transformations_Animations_CSS from './pages/css/Transitions_Transformations_Animations_CSS';
+import Functions_Variables_Organization_CSS from './pages/css/Functions_Variables_Organization_CSS';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -83,6 +89,12 @@ export default function App() {
             <Route path="/css/colors-units-measurements" element={<Colors_Units_Measurements_CSS />} />
             <Route path="/css/box-model" element={<Box_Model_CSS />} />
             <Route path="/css/display-flow" element={<Display_Flow_CSS />} />
+            <Route path="/css/position-zindex" element={<Position_ZIndex_CSS />} />
+            <Route path="/css/backgrounds-borders" element={<Backgrounds_Borders_CSS />} />
+            <Route path="/css/typography-text" element={<Typography_Text_CSS />} />
+            <Route path="/css/advanced-design" element={<Advanced_Design_CSS />} />
+            <Route path="/css/transitions-transformations-animations" element={<Transitions_Transformations_Animations_CSS />} />
+            <Route path="/css/functions-variables-organization" element={<Functions_Variables_Organization_CSS />} />
             {/*CSS*/}
             {/*JS*/}
             <Route path="/js/variables" element={<Variables_JS />} />
