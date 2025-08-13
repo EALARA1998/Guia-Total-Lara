@@ -7,13 +7,13 @@ type Npm_Packages_NodeProps = {
 export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
   return (
     <>
-      <h1>Paquetes de npm</h1>
-      <a href="https://www.npmjs.com/">npm</a>
+      <h1>Paquetes de NPM</h1>
+      <a href="https://www.npmjs.com/">NPM</a>
       <section>
         <h2>heroicons</h2>
-        <a href="https://www.npmjs.com/package/heroicons">npm heroicons</a>
-        <a href="https://heroicons.com/">HeroIcons</a>
-        <a href="https://app.unpkg.com/@heroicons/react@2.2.0/files/24/outline">Heroicons Icons Name</a>
+        <a href="https://www.npmjs.com/package/heroicons">NPM</a>
+        <a href="https://heroicons.com/">Heroicons</a>
+        <a href="https://app.unpkg.com/@heroicons/react@2.2.0/files/24/outline">Heroicons icons name</a>
         <section>
           <h3>Qué es:</h3>
           <p>Paquete con íconos SVG como componentes React.</p>

@@ -5,6 +5,22 @@
   background-color: black;
   justify-content: center;
 
+  a{
+    display: inline;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    font-size: GetFontSize("mobile","h3");
+    @include Tablet(){
+      font-size: GetFontSize("tablet","h3");
+    }
+    @include Desktop(){
+      font-size: GetFontSize("desktop","h3");
+    }
+  }
+
   ul.navbar_menu {
     list-style: none;
     margin: 0;

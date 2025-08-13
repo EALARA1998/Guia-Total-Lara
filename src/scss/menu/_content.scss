@@ -1,5 +1,11 @@
 .content{
+  & > section{
+    border: .1rem solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
   section{
-    padding: 0 0 0 1rem;
+    padding: 0 0 1rem 1rem;
   }
 }

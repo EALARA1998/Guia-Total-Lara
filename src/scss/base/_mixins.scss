@@ -26,53 +26,53 @@
     @if $font=="h1" {
       @return $fontSize;
     }@else if $font=="h2" {
-      @return MultiplyByPercentage($fontSize, .10, 1);
+      @return $fontSize * .9;
     }@else if $font=="h3" or $font=="nav"{
-      @return MultiplyByPercentage($fontSize, .10, 2);
+      @return $fontSize * .8;
     }@else if $font=="h4" {
-      @return MultiplyByPercentage($fontSize, .10, 3);
+      @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p" {
-      @return MultiplyByPercentage($fontSize, .10, 4);
+      @return $fontSize * .6;
     }@else if $font=="h6" or $font=="code" {
-      @return MultiplyByPercentage($fontSize, .10, 5);
+      @return $fontSize * .5;
     }
   }
-  $fontSize: $fontSize*.40+$fontSize;
+  $fontSize: $fontSize*2;
   @if $screen=="tablet" {
     @if $font=="h1" {
       @return $fontSize;
     }@else if $font=="h2" {
-      @return MultiplyByPercentage($fontSize, .10, 1);
+      @return $fontSize * .9;
     }@else if $font=="h3" or $font=="nav" {
-      @return MultiplyByPercentage($fontSize, .10, 2);
+      @return $fontSize * .8;
     }@else if $font=="h4" {
-      @return MultiplyByPercentage($fontSize, .10, 3);
+      @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p"  {
-      @return MultiplyByPercentage($fontSize, .10, 4);
+      @return $fontSize * .6;
     }@else if $font=="h6" or $font=="code" {
-      @return MultiplyByPercentage($fontSize, .10, 5);
+      @return $fontSize * .5;
     }
   }
-  $fontSize: $fontSize*.40+$fontSize;
+  $fontSize: $fontSize*1;
   @if $screen=="desktop" {
     @if $font=="h1" {
       @return $fontSize;
     }@else if $font=="h2" {
-      @return MultiplyByPercentage($fontSize, .10, 1);
+      @return $fontSize * .9;
     }@else if $font=="h3" or $font=="nav" {
-      @return MultiplyByPercentage($fontSize, .10, 2);
+      @return $fontSize * .8;
     }@else if $font=="h4" {
-      @return MultiplyByPercentage($fontSize, .10, 3);
+      @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p" {
-      @return MultiplyByPercentage($fontSize, .10, 4);
+      @return $fontSize * .6;
     }@else if $font=="h6" or $font=="code" {
-      @return MultiplyByPercentage($fontSize, .10, 5);
+      @return $fontSize * .5;
     }
   }
 }
 @function MultiplyByPercentage($value, $percentage, $times){
   @for $i from 1 through $times {
-    $value: $value - $value*$percentage
+    $value: $value*$percentage
   }
   @return $value;
 }

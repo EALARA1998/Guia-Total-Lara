@@ -1,11 +1,18 @@
 @use "./mixins" as *;
+@use "sass:color";
 html {
   font-family: 'Courier New', Courier, monospace;
   font-variant: small-caps;
   font-size: 62.5%;
   box-sizing: border-box;
   scroll-padding-top: 0rem;
-  margin: 2.5rem;
+  margin: 0.5rem;
+  @include Tablet(){
+    margin: 1.5rem;
+  }
+  @include Desktop(){
+    margin: 2rem;
+  }
 }
 *, 
 *:before,
@@ -23,6 +30,8 @@ h1, h2, h3, h4, h5, h6, p, li, a{
 }
 h1{
   text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: underline;
   font-size: GetFontSize("mobile","h1");
   @include Tablet(){
     font-size: GetFontSize("tablet","h1");
@@ -95,12 +104,27 @@ li{
   }
 }
 a{
-  font-size: GetFontSize("mobile","h4");
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  text-decoration: none;
+  padding: .5rem;
+  margin: 1rem 0;
+  border: 0.5rem solid transparent;
+  border-radius: 1rem;
+  background-color: darkblue;
+  color: white;
+  text-align: center;
+  font-size: GetFontSize("mobile","h5");
+  transition: background-color 0.1s linear;
+  &:hover{
+    background-color: color.adjust(darkblue, $lightness: 20%);
+  }
   @include Tablet(){
-    font-size: GetFontSize("tablet","h4");
+    font-size: GetFontSize("tablet","h5");
   }
   @include Desktop(){
-    font-size: GetFontSize("desktop","h4");
+    font-size: GetFontSize("desktop","h5");
   }
 }
 .code{
