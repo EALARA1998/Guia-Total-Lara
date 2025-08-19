@@ -6,7 +6,7 @@ export default function ECMAScript_Module_JS() {
       <h1>ECMAScript_Module</h1>
       <p>Aprender sobre ECMAScript Modules (ES Modules o ESM) es clave para estructurar bien tus proyectos modernos en JavaScript, especialmente en aplicaciones web y en herramientas como Node.js, React o Vite.</p>
       <section>
-        <h2>ECMAScript Modules (ES Modules) en JavaScript</h2>
+        <h2>ECMAScript Modules (ES Modules)</h2>
         <section>
           <h3>¿Qué es un módulo?</h3>
           <p>Un módulo es simplemente un archivo .js que exporta o importa código (funciones, variables, objetos, clases...) de otro archivo.</p>

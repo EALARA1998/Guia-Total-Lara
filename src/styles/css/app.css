@@ -5,6 +5,7 @@ html {
   box-sizing: border-box;
   scroll-padding-top: 0rem;
   margin: 0.5rem;
+  background-color: rgb(242.75, 242.75, 242.75);
 }
 @media (min-width: 1024px) {
   html {

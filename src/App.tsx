@@ -15,22 +15,22 @@ import Advanced_Design_CSS from './pages/css/Advanced_Design_CSS';
 /*CSS*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
-import Async_JS from './pages/js/Async_JS';
+import Async_Promises_JS from './pages/js/Async_Promises_JS';
 import Classes_JS from './pages/js/Classes_JS';
 import Control_Structures_JS from './pages/js/Control_Structures_JS';
 import Data_Types_JS from './pages/js/Data_Types_JS';
-import Dom_JS from './pages/js/Dom_JS';
+import DOM_JS from './pages/js/DOM_JS';
 import ECMAScript_Module_JS from './pages/js/ECMAScript_Module_JS';
 import Functions_JS from './pages/js/Functions_JS';
 import Object_Literal_JS from './pages/js/Object_Literal_JS';
 import Operators_JS from './pages/js/Operators_JS';
-import Performance_JS from './pages/js/Performance_JS';
+import Performance_Optimization_JS from './pages/js/Performance_Optimization_JS';
 import Strings_JS from './pages/js/Strings_JS';
 import Variables_JS from './pages/js/Variables_JS';
 import Json_JS from './pages/js/Json_JS';
 /*JS*/
 /*TS*/
-import Fundamentals_TS from './pages/ts/Fundamentals_TS';
+import Basic_Types_Annotations_TS from './pages/ts/Basic_Types_Annotations_TS';
 import Operators_TS from './pages/ts/Operators_TS';
 /*TS*/
 /*React*/
@@ -69,6 +69,26 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
 import Transitions_Transformations_Animations_CSS from './pages/css/Transitions_Transformations_Animations_CSS';
 import Functions_Variables_Organization_CSS from './pages/css/Functions_Variables_Organization_CSS';
+import Timers_Event_Loops_JS from './pages/js/Timers_Event_Loops_JS';
+import Modules_JS from './pages/js/Modules_JS';
+import Generators_Iterators_JS from './pages/js/Generators_Iterators_JS';
+import Fetch_AJAX_HTTP_requests_JS from './pages/js/Fetch_AJAX_HTTP_requests_JS';
+import BOM_JS from './pages/js/BOM_JS';
+import Web_Storage_Cookies_JS from './pages/js/Web_Storage_Cookies_JS';
+import Regular_Expressions_JS from './pages/js/Regular_Expressions_JS';
+import Proxies_Reflect_JS from './pages/js/Proxies_Reflect_JS';
+import Interfaces_Types_Advanced_TS from './pages/ts/Interfaces_Types_Advanced_TS';
+import Classes_OOP_TS from './pages/ts/Classes_OOP_TS';
+import Advanced_Utility_Types_TS from './pages/ts/Advanced_Utility_Types_TS';
+import Interfaces_Classes_TS from './pages/ts/Interfaces_Classes_TS';
+import Generics_TS from './pages/ts/Generics_TS';
+import Modules_Namespaces_TS from './pages/ts/Modules_Namespaces_TS';
+import Introduction_TS from './pages/ts/Introduction_TS';
+import Advanced_Functions_Types_TS from './pages/ts/Advanced_Functions_Types_TS';
+import Advanced_Types_TypeScript_Utilities_TS from './pages/ts/Advanced_Types_TypeScript_Utilities_TS';
+import Decorators_TS from './pages/ts/Decorators_TS';
+import Integration_With_APIs_External_Types_TS from './pages/ts/Integration_With_APIs_External_Types_TS';
+import Advanced_Generics_Combined_Utilities_TS from './pages/ts/Advanced_Generics_Combined_Utilities_TS';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -106,14 +126,35 @@ export default function App() {
             <Route path="/js/control_structures" element={<Control_Structures_JS />} />
             <Route path="/js/functions" element={<Functions_JS />} />
             <Route path="/js/classes" element={<Classes_JS />} />
-            <Route path="/js/async" element={<Async_JS />} />
-            <Route path="/js/dom" element={<Dom_JS />} />
+            <Route path="/js/async-promises" element={<Async_Promises_JS />} />
+            <Route path="/js/timers-event-loops" element={<Timers_Event_Loops_JS />} />
+            <Route path="/js/generators-iterators" element={<Generators_Iterators_JS />} />
+            <Route path="/js/modules" element={<Modules_JS />} />
             <Route path="/js/ecmascript_Module" element={<ECMAScript_Module_JS />} />
-            <Route path="/js/performance" element={<Performance_JS />} />
+            <Route path="/js/fetch-ajax-http-requests" element={<Fetch_AJAX_HTTP_requests_JS />} />
+            <Route path="/js/dom" element={<DOM_JS />} />
+            <Route path="/js/bom" element={<BOM_JS />} />
+            <Route path="/js/web-storage-cookies" element={<Web_Storage_Cookies_JS />} />
+            <Route path="/js/regular-expressions" element={<Regular_Expressions_JS />} />
+            <Route path="/js/proxies-reflect" element={<Proxies_Reflect_JS />} />
+            <Route path="/js/performance" element={<Performance_Optimization_JS />} />
             <Route path="/js/json" element={<Json_JS />} />
             {/*JS*/}
             {/*TS*/}
-            <Route path="/ts/fundamentals" element={<Fundamentals_TS />} />
+            <Route path="/ts/introduction" element={<Introduction_TS />} />
+            <Route path="/ts/basic-types-annotations" element={<Basic_Types_Annotations_TS />} />
+            <Route path="/ts/interfaces-types-advanced" element={<Interfaces_Types_Advanced_TS />} />
+            <Route path="/ts/classes_oop" element={<Classes_OOP_TS />} />
+            <Route path="/ts/advanced-Utility-Types" element={<Advanced_Utility_Types_TS />} />
+            <Route path="/ts/interfaces-classes" element={<Interfaces_Classes_TS />} />
+            <Route path="/ts/generics" element={<Generics_TS />} />
+            <Route path="/ts/modules-namespaces" element={<Modules_Namespaces_TS />} />
+            <Route path="/ts/advanced-functions-types" element={<Advanced_Functions_Types_TS />} />
+            <Route path="/ts/advanced-types-typescript-utilities" element={<Advanced_Types_TypeScript_Utilities_TS />} />
+            <Route path="/ts/decorators" element={<Decorators_TS />} />
+            <Route path="/ts/advanced-classes-inheritance" element={<Advanced_Types_TypeScript_Utilities_TS />} />
+            <Route path="/ts/integration-with-apis-external-types" element={<Integration_With_APIs_External_Types_TS />} />
+            <Route path="/ts/advanced-generics-combined-utilities" element={<Advanced_Generics_Combined_Utilities_TS />} />
             <Route path="/ts/operators" element={<Operators_TS />} />
             {/*TS*/}
             {/*React*/}

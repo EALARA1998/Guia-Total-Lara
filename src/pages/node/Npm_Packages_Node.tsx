@@ -751,13 +751,13 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
         <section>
           <h3>React</h3>
           <section>
-            <h4></h4>
+            <h4>Instalacion:</h4>
             <Code>{`
               npm install --save react-toastify
             `}</Code>
           </section>
           <section>
-            <h4></h4>
+            <h4>Ejemplo completo:</h4>
             <Code>{`
               import React from 'react';
               import { ToastContainer, toast } from 'react-toastify';
@@ -772,6 +772,81 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
                     <ToastContainer />
                   </div>
                 );
+              }
+            `}</Code>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>currency-codes / currency-symbol-map</h2>
+        <a href="https://www.npmjs.com/package/currency-codes">NPM</a>
+        <section>
+          <h3>Qué es:</h3>
+          <p>Un módulo de node.js para enumerar y trabajar con códigos de moneda basados en el estándar ISO 4217.</p>
+        </section>
+        <section>
+          <h3>React</h3>
+          <section>
+            <h4>Instalacion:</h4>
+            <Code>{`
+              npm install currency-codes
+              npm install currency-symbol-map 
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplo completo:</h4>
+            <Code>{`
+              import currencyCode from "currency-codes";
+
+              iso4217Data: typeof currencyCode = currencyCode
+            `}</Code>
+            <Code>{`
+              import getSymbolFromCurrency from "currency-symbol-map";
+              import { useEffect } from "react"
+              import { useStore } from "../store/useStore";
+
+              export default function Home() {
+
+                const { iso4217Data, options, setOptions } = useStore()
+
+                const iso4217DataSorted = iso4217Data.data.sort((a,b) => a.currency.localeCompare(b.currency))
+
+                useEffect(()=>{
+                  console.log( iso4217DataSorted)
+                },[])
+
+                return (
+                  <>
+                    <section className="content_home">
+                      <h2>Home</h2>
+                      <section>
+                        <h3>Options:</h3>
+                        <section>
+                          <label htmlFor="option_currency" >Choose your currency:</label>
+                          <select
+                            id="option_currency"
+                            value={options.currency}
+                            onChange={(e)=>{
+                              setOptions("currency", e.target.value);
+                              const [, code] = e.target.value.split('|');
+                              setOptions("currencySymbol", getSymbolFromCurrency(code) || "");
+                            }}
+                          >
+                            <option value="">---</option>
+                            { iso4217DataSorted.map( (data,i) => (
+                              <option
+                                key={i}
+                                value={\`\${data.currency}|\${data.code}\`}
+                              >
+                                {\`\${data.code} --- \${data.currency} --- \${getSymbolFromCurrency(data.code)}\`}
+                              </option>
+                            ))}
+                          </select>
+                        </section>
+                      </section>
+                    </section>
+                  </>
+                )
               }
             `}</Code>
           </section>

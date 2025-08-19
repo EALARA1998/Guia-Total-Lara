@@ -27,9 +27,9 @@
       @return $fontSize;
     }@else if $font=="h2" {
       @return $fontSize * .9;
-    }@else if $font=="h3" or $font=="nav"{
+    }@else if $font=="h3" {
       @return $fontSize * .8;
-    }@else if $font=="h4" {
+    }@else if $font=="h4" or $font=="nav" {
       @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p" {
       @return $fontSize * .6;
@@ -43,9 +43,9 @@
       @return $fontSize;
     }@else if $font=="h2" {
       @return $fontSize * .9;
-    }@else if $font=="h3" or $font=="nav" {
+    }@else if $font=="h3" {
       @return $fontSize * .8;
-    }@else if $font=="h4" {
+    }@else if $font=="h4" or $font=="nav" {
       @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p"  {
       @return $fontSize * .6;
@@ -59,9 +59,9 @@
       @return $fontSize;
     }@else if $font=="h2" {
       @return $fontSize * .9;
-    }@else if $font=="h3" or $font=="nav" {
+    }@else if $font=="h3" {
       @return $fontSize * .8;
-    }@else if $font=="h4" {
+    }@else if $font=="h4" or $font=="nav" {
       @return $fontSize * .7;
     }@else if $font=="h5" or $font=="p" {
       @return $fontSize * .6;
