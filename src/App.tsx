@@ -12,6 +12,9 @@ import Position_ZIndex_CSS from './pages/css/Position_ZIndex_CSS';
 import Backgrounds_Borders_CSS from './pages/css/Backgrounds_Borders_CSS';
 import Typography_Text_CSS from './pages/css/Typography_Text_CSS';
 import Advanced_Design_CSS from './pages/css/Advanced_Design_CSS';
+import Transitions_Transformations_Animations_CSS from './pages/css/Transitions_Transformations_Animations_CSS';
+import Functions_Variables_Organization_CSS from './pages/css/Functions_Variables_Organization_CSS';
+import Timers_Event_Loops_JS from './pages/js/Timers_Event_Loops_JS';
 /*CSS*/
 /*JS*/
 import Arrays_JS from './pages/js/Arrays_JS';
@@ -28,10 +31,29 @@ import Performance_Optimization_JS from './pages/js/Performance_Optimization_JS'
 import Strings_JS from './pages/js/Strings_JS';
 import Variables_JS from './pages/js/Variables_JS';
 import Json_JS from './pages/js/Json_JS';
+import Modules_JS from './pages/js/Modules_JS';
+import Generators_Iterators_JS from './pages/js/Generators_Iterators_JS';
+import Fetch_AJAX_HTTP_requests_JS from './pages/js/Fetch_AJAX_HTTP_requests_JS';
+import BOM_JS from './pages/js/BOM_JS';
+import Web_Storage_Cookies_JS from './pages/js/Web_Storage_Cookies_JS';
+import Regular_Expressions_JS from './pages/js/Regular_Expressions_JS';
+import Proxies_Reflect_JS from './pages/js/Proxies_Reflect_JS';
 /*JS*/
 /*TS*/
 import Basic_Types_Annotations_TS from './pages/ts/Basic_Types_Annotations_TS';
 import Operators_TS from './pages/ts/Operators_TS';
+import Interfaces_Types_Advanced_TS from './pages/ts/Interfaces_Types_Advanced_TS';
+import Classes_OOP_TS from './pages/ts/Classes_OOP_TS';
+import Advanced_Utility_Types_TS from './pages/ts/Advanced_Utility_Types_TS';
+import Interfaces_Classes_TS from './pages/ts/Interfaces_Classes_TS';
+import Generics_TS from './pages/ts/Generics_TS';
+import Modules_Namespaces_TS from './pages/ts/Modules_Namespaces_TS';
+import Introduction_TS from './pages/ts/Introduction_TS';
+import Advanced_Functions_Types_TS from './pages/ts/Advanced_Functions_Types_TS';
+import Advanced_Types_TypeScript_Utilities_TS from './pages/ts/Advanced_Types_TypeScript_Utilities_TS';
+import Decorators_TS from './pages/ts/Decorators_TS';
+import Integration_With_APIs_External_Types_TS from './pages/ts/Integration_With_APIs_External_Types_TS';
+import Advanced_Generics_Combined_Utilities_TS from './pages/ts/Advanced_Generics_Combined_Utilities_TS';
 /*TS*/
 /*React*/
 import Components_React from './pages/react/Components_React';
@@ -67,28 +89,6 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
-import Transitions_Transformations_Animations_CSS from './pages/css/Transitions_Transformations_Animations_CSS';
-import Functions_Variables_Organization_CSS from './pages/css/Functions_Variables_Organization_CSS';
-import Timers_Event_Loops_JS from './pages/js/Timers_Event_Loops_JS';
-import Modules_JS from './pages/js/Modules_JS';
-import Generators_Iterators_JS from './pages/js/Generators_Iterators_JS';
-import Fetch_AJAX_HTTP_requests_JS from './pages/js/Fetch_AJAX_HTTP_requests_JS';
-import BOM_JS from './pages/js/BOM_JS';
-import Web_Storage_Cookies_JS from './pages/js/Web_Storage_Cookies_JS';
-import Regular_Expressions_JS from './pages/js/Regular_Expressions_JS';
-import Proxies_Reflect_JS from './pages/js/Proxies_Reflect_JS';
-import Interfaces_Types_Advanced_TS from './pages/ts/Interfaces_Types_Advanced_TS';
-import Classes_OOP_TS from './pages/ts/Classes_OOP_TS';
-import Advanced_Utility_Types_TS from './pages/ts/Advanced_Utility_Types_TS';
-import Interfaces_Classes_TS from './pages/ts/Interfaces_Classes_TS';
-import Generics_TS from './pages/ts/Generics_TS';
-import Modules_Namespaces_TS from './pages/ts/Modules_Namespaces_TS';
-import Introduction_TS from './pages/ts/Introduction_TS';
-import Advanced_Functions_Types_TS from './pages/ts/Advanced_Functions_Types_TS';
-import Advanced_Types_TypeScript_Utilities_TS from './pages/ts/Advanced_Types_TypeScript_Utilities_TS';
-import Decorators_TS from './pages/ts/Decorators_TS';
-import Integration_With_APIs_External_Types_TS from './pages/ts/Integration_With_APIs_External_Types_TS';
-import Advanced_Generics_Combined_Utilities_TS from './pages/ts/Advanced_Generics_Combined_Utilities_TS';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
