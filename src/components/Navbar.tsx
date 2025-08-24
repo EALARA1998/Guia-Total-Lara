@@ -34,6 +34,13 @@ const menuItems: MenuItem[] = [
       { label: "Advanced_Design", path: "/css/advanced-design" },
       { label: "Transitions_Transformations_Animations", path: "/css/transitions-transformations-animations" },
       { label: "Functions_Variables_Organization", path: "/css/functions-variables-organization" },
+      { 
+        label: "Styles",
+        path: "/css/styles",
+        children: [
+          { label: "Tools", path: "/css/styles/tools" }
+        ]
+      },
     ],
   },
   {
@@ -114,6 +121,14 @@ const menuItems: MenuItem[] = [
     path: "/json",
     children: [
       { label: "Typescript", path: "/json/typescript" },
+    ],
+  },
+  {
+    label: "APIs",
+    path: "/apis",
+    children: [
+      { label: "Open_Weather", path: "/apis/open_weather" },
+      { label: "Food_Data_Central", path: "/apis/usda_fooddata_central" },
     ],
   },
   {

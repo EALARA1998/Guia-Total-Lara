@@ -1,0 +1,70 @@
+.content{
+  &_index{
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    button{
+      background-color: darkgreen;
+      color: white;
+      font-weight: bold;
+    }
+    &_info{
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+      a{
+        border: none;
+        color: darkblue;
+        background-color: transparent;
+        text-align: start;
+        display: inline;
+        padding: 0;
+        p{
+          display: inline;
+        }
+        span{
+          font-size: .6em;
+        }
+      }
+      &_a{
+        &_1{
+          margin: 0 0 0 0rem;
+          p{
+            text-decoration: underline;
+            text-transform: uppercase;
+          }
+        }
+        &_2{
+          p{
+            text-decoration: underline;
+          }
+          margin: 0 0 0 1rem;
+        }
+        &_3{
+          margin: 0 0 0 2rem;
+        }
+        &_4{
+          margin: 0 0 0 3rem;
+          font-weight: 500;
+        }
+        &_5{
+          margin: 0 0 0 4rem;
+          font-weight: 500;
+        }
+        &_6{
+          margin: 0 0 0 5rem;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  & > section{
+    border: .1rem solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  section{
+    padding: 0 0 1rem 1rem;
+  }
+}

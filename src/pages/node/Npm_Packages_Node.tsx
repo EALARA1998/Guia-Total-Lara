@@ -852,6 +852,164 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
           </section>
         </section>
       </section>
+      <section>
+        <h2>zod</h2>
+        <a href="https://www.npmjs.com/package/zod">NPM</a>
+        <a href="https://zod.dev/">Documentación oficial</a>
+        <section>
+          <h3>Qué es:</h3>
+          <p> Librería de validación y tipado de datos para TypeScript/JavaScript.</p>
+          <p>Permite definir esquemas y validar objetos de forma sencilla.</p>
+        </section>
+        <section>
+          <h3>React</h3>
+          <section>
+            <h4>Instalación:</h4>
+            <Code>{`
+              npm install zod
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplo completo:</h4>
+            <Code>{`
+              import React, { useState } from 'react';
+              import { z } from 'zod';
+
+              // Definimos un esquema de validación
+              const userSchema = z.object({
+                name: z.string().min(2, "El nombre debe tener al menos 2 caracteres"),
+                age: z.number().min(18, "Debe ser mayor de edad"),
+              });
+
+              export default function ZodExample() {
+                const [input, setInput] = useState({ name: "", age: 0 });
+                const [error, setError] = useState<string | null>(null);
+
+                const validate = () => {
+                  const result = userSchema.safeParse(input);
+                  if (!result.success) {
+                    setError(result.error.errors[0].message);
+                  } else {
+                    setError(null);
+                    alert("Datos válidos ✅");
+                  }
+                };
+
+                return (
+                  <div>
+                    <h2>Ejemplo Zod</h2>
+                    <input
+                      placeholder="Nombre"
+                      value={input.name}
+                      onChange={(e) => setInput({ ...input, name: e.target.value })}
+                    />
+                    <input
+                      type="number"
+                      placeholder="Edad"
+                      value={input.age}
+                      onChange={(e) => setInput({ ...input, age: Number(e.target.value) })}
+                    />
+                    <button onClick={validate}>Validar</button>
+                    {error && <p style={{ color: "red" }}>{error}</p>}
+                  </div>
+                );
+              }
+            `}</Code>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>valibot</h2>
+        <a href="https://www.npmjs.com/package/valibot">NPM</a>
+        <a href="https://valibot.dev/">Documentación oficial</a>
+        <section>
+          <h3>Qué es:</h3>
+          <p>Librería de validación de datos ligera y rápida, similar a Zod, pero más enfocada en rendimiento y esquemas simples para TypeScript/JavaScript.</p>
+        </section>
+        <section>
+          <h3>React</h3>
+          <section>
+            <h4>Instalación:</h4>
+            <Code>{`
+              npm install valibot
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplo completo:</h4>
+            <Code>{`
+              import { object, string, number, parse } from "valibot"
+              import type { InferOutput } from "valibot"
+
+              const WeatherSchema = object({
+                name: string(),
+                main: object({
+                  temp: number(),
+                  temp_max: number(),
+                  temp_min: number(),
+                })
+              })
+              type Weather = InferOutput<typeof WeatherSchema>
+
+              export default function useWeather() {
+                
+                const [weather, setWeather] = useState<Weather>(initialWeather)
+                const [loading, setLoading] = useState(false)
+                const [notFound, setNotFound] = useState(false)
+
+                const hasWeatherData = useMemo(()=>weather.name,[weather])
+
+
+                const fetchWeather = async (search: SearchType) => {
+                  const API_KEY = import.meta.env.VITE_API_KEY
+                  setLoading(true)
+                  setWeather(initialWeather)
+                  setNotFound(false)
+                  try {
+                    const geoUrl = \`https://api.openweathermap.org/geo/1.0/direct?q=\${search.city},\${search.country}&appid=\${API_KEY}\`
+                    await fetch(geoUrl)
+                      .then(res => {
+                        if (!res.ok) throw new Error("HTTP error: " + res.status)
+                        return res.json()
+                    })
+                      .then(data => {
+                        if (!data[0]) {
+                          console.log("Clima no encontrado.")
+                          setNotFound(true)
+                          return
+                        }
+
+                        const lat = data[0].lat
+                        const lon = data[0].lon
+                        const currentWeatherUrl =\`https://api.openweathermap.org/data/2.5/weather?lat=\${lat}&lon=\${lon}&appid=\${API_KEY}\`
+
+                        Valibot
+                        fetch(currentWeatherUrl)
+                        .then(res => res.json())
+                        .then(data => {
+                          const result = parse(WeatherSchema, data)
+                            if(!result) throw new Error("El tipo definido no concuerda con la informacion recibida.")
+                            console.log(result.name + " " + result.main.temp_max + " " + result.main.temp_min)
+                          })
+                      })
+                  } catch (error) {
+                    console.log(error)
+                  } finally {
+                    setLoading(false)
+                  }
+                }
+
+                return {
+                  fetchWeather,
+                  weather,
+                  loading,
+                  notFound,
+                  hasWeatherData
+                }
+              }
+            `}</Code>
+          </section>
+        </section>
+      </section>
     </>
   )
 }

@@ -7,7 +7,7 @@ html {
   box-sizing: border-box;
   scroll-padding-top: 0rem;
   margin: 0.5rem;
-  background-color: color.adjust(gray, $lightness: 45);
+  background-color: color.adjust(gray, $lightness: 45%);
   @include Tablet(){
     margin: 1.5rem;
   }
@@ -95,13 +95,24 @@ p{
     font-size: GetFontSize("desktop","p");
   }
 }
-li{
+ul, li{
   font-size: GetFontSize("mobile","p");
   @include Tablet(){
     font-size: GetFontSize("tablet","p");
   }
   @include Desktop(){
     font-size: GetFontSize("desktop","p");
+  }
+}
+button{
+  font-family: 'Courier New', Courier, monospace;
+  font-variant: small-caps;
+  font-size: GetFontSize("mobile","h3");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h3");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h3");
   }
 }
 a{

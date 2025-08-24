@@ -136,17 +136,33 @@ p {
   }
 }
 
-li {
+ul, li {
   font-size: 1.5rem;
 }
 @media (min-width: 1024px) {
-  li {
+  ul, li {
     font-size: 2.25rem;
   }
 }
 @media (min-width: 1280px) {
-  li {
+  ul, li {
     font-size: 2.25rem;
+  }
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-variant: small-caps;
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  button {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  button {
+    font-size: 3rem;
   }
 }
 
@@ -225,6 +241,73 @@ table tbody tr td {
   padding: 10px 15px;
   text-align: left;
   vertical-align: middle;
+}
+
+.content_index {
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.content_index button {
+  background-color: darkgreen;
+  color: white;
+  font-weight: bold;
+}
+.content_index_info {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem;
+}
+.content_index_info a {
+  border: none;
+  color: darkblue;
+  background-color: transparent;
+  text-align: start;
+  display: inline;
+  padding: 0;
+}
+.content_index_info a p {
+  display: inline;
+}
+.content_index_info a span {
+  font-size: 0.6em;
+}
+.content_index_info_a_1 {
+  margin: 0 0 0 0rem;
+}
+.content_index_info_a_1 p {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.content_index_info_a_2 {
+  margin: 0 0 0 1rem;
+}
+.content_index_info_a_2 p {
+  text-decoration: underline;
+}
+.content_index_info_a_3 {
+  margin: 0 0 0 2rem;
+}
+.content_index_info_a_4 {
+  margin: 0 0 0 3rem;
+  font-weight: 500;
+}
+.content_index_info_a_5 {
+  margin: 0 0 0 4rem;
+  font-weight: 500;
+}
+.content_index_info_a_6 {
+  margin: 0 0 0 5rem;
+  font-weight: 500;
+}
+.content > section {
+  border: 0.1rem solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+.content section {
+  padding: 0 0 1rem 1rem;
 }
 
 .navbar {
@@ -324,14 +407,4 @@ table tbody tr td {
 .navbar li.navbar_menu_section.open > ul.navbar_menu {
   display: flex;
   flex-direction: column;
-}
-
-.content > section {
-  border: 0.1rem solid black;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-.content section {
-  padding: 0 0 1rem 1rem;
 }/*# sourceMappingURL=app.css.map */
