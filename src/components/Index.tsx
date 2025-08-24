@@ -51,7 +51,7 @@ export default function Index({}:IndexProps) {
   return (
     <>
       <button
-        onClick={e => {
+        onClick={() => {
           setIndexToggle(!indexToggle)
         }}
       >Index List</button>
