@@ -1,17 +1,48 @@
+@use "sass:color";
+
 .content{
   &_index{
-    margin: 1rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
-    button{
+    padding: 0;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+    &_button{
+      display: flex;
+      margin: 1rem auto;
+      align-items: center;
       background-color: darkgreen;
-      color: white;
-      font-weight: bold;
+      padding: .5rem 1rem;
+      label{
+        color: white;
+      }
+      input[type="checkbox"] {
+        width: 2.5rem;
+        height: 2.5rem;
+        background-color: white;
+        appearance: none;   /* Quita el estilo por defecto */
+        -webkit-appearance: none;
+        cursor: pointer;
+        position: relative; /* Necesario para que ::after funcione */
+        transition: background-color .1s ease;
+      }
+      input[type="checkbox"]:checked::after {
+        content: "✓"; /* Aquí controlas el símbolo */
+        color: darkgreen;
+        font-size: 1.5rem;
+        font-weight: bold;
+        position: absolute;
+        top: 2px;
+        left: 8px;
+      }
+      &:hover{
+        background-color: color.adjust(darkgreen, $lightness: 10%);
+      }
     }
     &_info{
       display: flex;
       flex-direction: column;
-      margin: 2rem;
+      margin: 2rem auto;
       a{
         border: none;
         color: darkblue;
@@ -19,6 +50,11 @@
         text-align: start;
         display: inline;
         padding: 0;
+        cursor: default;
+        transition: color .1s ease;
+        &:hover{
+          color: color.adjust(darkred, $lightness: 10%);
+        }
         p{
           display: inline;
         }
@@ -58,13 +94,17 @@
       }
     }
   }
-  & > section{
-    border: .1rem solid black;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-  section{
-    padding: 0 0 1rem 1rem;
+  &_info{
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+    padding: 2rem;
+    & > section{
+      border: .1rem solid black;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+    section{
+      padding: 0 0 1rem 1rem;
+    }
   }
 }

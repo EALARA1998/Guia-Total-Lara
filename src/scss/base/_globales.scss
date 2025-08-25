@@ -33,6 +33,7 @@ h1{
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: underline;
+  margin-top: 1rem;
   font-size: GetFontSize("mobile","h1");
   @include Tablet(){
     font-size: GetFontSize("tablet","h1");
@@ -107,6 +108,15 @@ ul, li{
 button{
   font-family: 'Courier New', Courier, monospace;
   font-variant: small-caps;
+  font-size: GetFontSize("mobile","h3");
+  @include Tablet(){
+    font-size: GetFontSize("tablet","h3");
+  }
+  @include Desktop(){
+    font-size: GetFontSize("desktop","h3");
+  }
+}
+label{
   font-size: GetFontSize("mobile","h3");
   @include Tablet(){
     font-size: GetFontSize("tablet","h3");

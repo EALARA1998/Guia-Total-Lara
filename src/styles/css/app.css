@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: "Courier New", Courier, monospace;
   font-variant: small-caps;
@@ -39,6 +40,7 @@ h1 {
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: underline;
+  margin-top: 1rem;
   font-size: 2.5rem;
 }
 @media (min-width: 1024px) {
@@ -166,6 +168,20 @@ button {
   }
 }
 
+label {
+  font-size: 2rem;
+}
+@media (min-width: 1024px) {
+  label {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1280px) {
+  label {
+    font-size: 3rem;
+  }
+}
+
 a {
   display: flex;
   flex-direction: column;
@@ -244,19 +260,48 @@ table tbody tr td {
 }
 
 .content_index {
-  margin: 1rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  padding: 0;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
 }
-.content_index button {
+.content_index_button {
+  display: flex;
+  margin: 1rem auto;
+  align-items: center;
   background-color: darkgreen;
+  padding: 0.5rem 1rem;
+}
+.content_index_button label {
   color: white;
+}
+.content_index_button input[type=checkbox] {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: white;
+  appearance: none; /* Quita el estilo por defecto */
+  -webkit-appearance: none;
+  cursor: pointer;
+  position: relative; /* Necesario para que ::after funcione */
+  transition: background-color 0.1s ease;
+}
+.content_index_button input[type=checkbox]:checked::after {
+  content: "✓"; /* Aquí controlas el símbolo */
+  color: darkgreen;
+  font-size: 1.5rem;
   font-weight: bold;
+  position: absolute;
+  top: 2px;
+  left: 8px;
+}
+.content_index_button:hover {
+  background-color: #009700;
 }
 .content_index_info {
   display: flex;
   flex-direction: column;
-  margin: 2rem;
+  margin: 2rem auto;
 }
 .content_index_info a {
   border: none;
@@ -265,6 +310,11 @@ table tbody tr td {
   text-align: start;
   display: inline;
   padding: 0;
+  cursor: default;
+  transition: color 0.1s ease;
+}
+.content_index_info a:hover {
+  color: #be0000;
 }
 .content_index_info a p {
   display: inline;
@@ -300,13 +350,17 @@ table tbody tr td {
   margin: 0 0 0 5rem;
   font-weight: 500;
 }
-.content > section {
+.content_info {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  padding: 2rem;
+}
+.content_info > section {
   border: 0.1rem solid black;
   border-top: none;
   border-left: none;
   border-right: none;
 }
-.content section {
+.content_info section {
   padding: 0 0 1rem 1rem;
 }
 

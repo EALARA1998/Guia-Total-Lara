@@ -50,11 +50,17 @@ export default function Index({}:IndexProps) {
 
   return (
     <>
-      <button
-        onClick={() => {
-          setIndexToggle(!indexToggle)
-        }}
-      >Index List</button>
+      <section className="content_index_button">
+        <label htmlFor="content_index_button">Index</label>
+        <input
+          id="content_index_button"
+          type="checkbox"
+          checked={indexToggle}
+          onChange={()=>{
+            setIndexToggle(!indexToggle)
+          }}
+        ></input>
+      </section>
         { indexToggle ? (
             <section className="content_index_info">
               {
