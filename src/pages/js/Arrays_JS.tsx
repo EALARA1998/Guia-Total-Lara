@@ -322,8 +322,8 @@ export default function Arrays_JS() {
           letras.sort();    // ["a", "b", "c"]
           letras.reverse(); // ["c", "b", "a"]
         `}</Code>
-        <h3>Números:</h3>
         <section>
+          <h3>Números:</h3>
           <Code>{`
             [10, 2, 30].sort((a, b) => a - b); // [2, 10, 30]
           `}</Code>
