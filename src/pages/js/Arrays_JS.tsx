@@ -322,10 +322,30 @@ export default function Arrays_JS() {
           letras.sort();    // ["a", "b", "c"]
           letras.reverse(); // ["c", "b", "a"]
         `}</Code>
-        <p>Para números:</p>
-        <Code>{`
-          [10, 2, 30].sort((a, b) => a - b); // [2, 10, 30]
-        `}</Code>
+        <h3>Números:</h3>
+        <section>
+          <Code>{`
+            [10, 2, 30].sort((a, b) => a - b); // [2, 10, 30]
+          `}</Code>
+        </section>
+        <section>
+          <h3>Por propiedad</h3>
+          <Code>{`
+            const personas = [
+              { nombre: "Ana", edad: 30 },
+              { nombre: "Luis", edad: 25 },
+              { nombre: "Marta", edad: 40 }
+            ];
+
+            // Ordenar por nombre alfabéticamente (A-Z)
+            personas.sort((a, b) => a.nombre.localeCompare(b.nombre));
+            console.log(personas);
+
+            // Ordenar por nombre alfabéticamente (Z-A)
+            personas.sort((a, b) => b.nombre.localeCompare(a.nombre));
+            console.log(personas);
+          `}</Code>
+        </section>
       </section>
       <section>
         <h2>Convertir entre string y array</h2>
