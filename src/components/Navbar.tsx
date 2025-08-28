@@ -129,6 +129,7 @@ const menuItems: MenuItem[] = [
     children: [
       { label: "Open_Weather", path: "/apis/open_weather" },
       { label: "Food_Data_Central", path: "/apis/usda_fooddata_central" },
+      { label: "Free_Cocktail", path: "/apis/free_cocktail" },
     ],
   },
   {
@@ -146,7 +147,7 @@ const menuItems: MenuItem[] = [
     ],
   },
   {
-    label: "Visual Studio Code",
+    label: "Visual_Studio_Code",
     path: "/vscode",
     children: [
       { label: "Comandos", path: "/vscode/commands" },

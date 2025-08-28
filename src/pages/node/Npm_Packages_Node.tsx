@@ -1010,6 +1010,399 @@ export default function Npm_Packages_Node({}:Npm_Packages_NodeProps) {
           </section>
         </section>
       </section>
+      <section>
+        <h2>react-router-dom</h2>
+        <a href="https://www.npmjs.com/package/react-router-dom">NPM</a>
+        <a href="https://reactrouter.com/en/main">Documentación oficial</a>
+        <section>
+          <h3>Qué es:</h3>
+          <p>Librería para gestionar la navegación en aplicaciones React mediante enrutamiento declarativo.</p>
+        </section>
+        <section>
+          <h3>React</h3>
+          <section>
+            <h4>Instalación:</h4>
+            <Code>{`
+              npm install react-router-dom
+            `}</Code>
+          </section>
+          <section>
+            <h4>Elementos principales:</h4>
+            <section>
+              <h5>BrowserRouter</h5>
+              <p>Es el contenedor principal que habilita el enrutamiento en tu aplicación. Usa la API de historial del navegador para sincronizar la URL con la UI.</p>
+              <Code>{`
+                import { BrowserRouter } from "react-router-dom";
+
+                export default function App() {
+                  return (
+                    <BrowserRouter>
+                      {/* Aquí van tus rutas */}
+                    </BrowserRouter>
+                  )
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>Routes</h5>
+              <p>
+                Es un contenedor que agrupa todas las <code>Route</code>. Evalúa la URL
+                actual y renderiza la primera ruta que coincide.
+              </p>
+              <Code>{`
+                import { Routes, Route } from "react-router-dom";
+
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/about" element={<About />} />
+                </Routes>
+              `}</Code>
+            </section>
+            <section>
+              <h5>Route</h5>
+              <p>
+                Define una ruta específica de la aplicación: recibe un <code>path</code> y
+                el <code>element</code> que debe renderizarse si coincide con la URL.
+              </p>
+              <Code>{`
+                <Route path="/contact" element={<Contact />} />
+              `}</Code>
+              <h5>Link</h5>
+              <p>Se usa para navegar entre rutas sin recargar la página. Renderiza una etiqueta <code>&lt;a&gt;</code> pero controlada por React Router.</p>
+              <Code>{`
+                import { Link } from "react-router-dom";
+
+                function Navbar() {
+                  return (
+                    <nav>
+                      <Link to="/">Inicio</Link>
+                      <Link to="/about">Acerca de</Link>
+                    </nav>
+                  )
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>NavLink</h5>
+              <p>Igual que <code>Link</code>, pero permite aplicar estilos automáticamente cuando la ruta está activa. Útil para menús de navegación.
+              </p>
+              <Code>{`
+                import { NavLink } from "react-router-dom";
+
+                function Navbar() {
+                  return (
+                    <nav>
+                      <NavLink
+                        to="/"
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Inicio
+                      </NavLink>
+                      <NavLink
+                        to="/about"
+                        className={({ isActive }) => isActive ? "active-link" : ""}
+                      >
+                        Acerca de
+                      </NavLink>
+                    </nav>
+                  )
+                }
+              `}</Code>
+            </section>
+          </section>
+          <section>
+            <h4>Hooks principales</h4>
+            <section>
+              <h5>useNavigate</h5>
+              <p>Qué hace: permite navegar de forma programática (sin hacer clic en un {`<Link>`}).</p>
+              <p>Uso típico: redirecciones después de una acción (login, guardar datos, etc.).</p>
+              <Code>{`
+                import { useNavigate } from "react-router-dom";
+
+                function LoginButton() {
+                  const navigate = useNavigate();
+
+                  const handleLogin = () => {
+                    // lógica de autenticación...
+                    navigate("/dashboard"); // redirige a /dashboard
+                  };
+
+                  return <button onClick={handleLogin}>Iniciar sesión</button>;
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useParams</h5>
+              <p>Qué hace: obtiene los parámetros dinámicos de la URL.</p>
+              <p>Uso típico: mostrar detalles de un recurso (ej: /user/:id).</p>
+              <Code>{`
+                import { useParams } from "react-router-dom";
+
+                function UserProfile() {
+                  const { id } = useParams(); // { id: "123" }
+                  return <h2>Perfil del usuario con ID: {id}</h2>;
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useLocation</h5>
+              <p>Qué hace: devuelve información sobre la URL actual (pathname, search, hash).</p>
+              <p>Uso típico: leer query strings o mostrar en qué página estás.</p>
+              <Code>{`
+                import { useLocation } from "react-router-dom";
+
+                function LocationExample() {
+                  const location = useLocation();
+                  return (
+                    <div>
+                      <p>Ruta actual: {location.pathname}</p>
+                      <p>Query string: {location.search}</p>
+                    </div>
+                  );
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useMatch</h5>
+              <p>Qué hace: compara la URL actual con un patrón de ruta.</p>
+              <p>Uso típico: saber si la URL coincide con un path específico.</p>
+              <Code>{`
+                import { useMatch } from "react-router-dom";
+
+                function CustomHighlight() {
+                  const match = useMatch("/about");
+                  return <p>{match ? "Estás en About ✅" : "No estás en About ❌"}</p>;
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useRoutes</h5>
+              <p>Qué hace: permite definir rutas como un objeto JS en lugar de usar {`<Routes>`}.</p>
+              <p>Uso típico: cuando quieres una configuración de rutas centralizada.</p>
+              <Code>{`
+                import { useRoutes } from "react-router-dom";
+
+                function AppRoutes() {
+                  const routes = useRoutes([
+                    { path: "/", element: <Home /> },
+                    { path: "/about", element: <About /> },
+                    { path: "/user/:id", element: <UserProfile /> },
+                  ]);
+
+                  return routes;
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useNavigationType</h5>
+              <p>Qué hace: indica cómo se llegó a la página actual (ej: POP, PUSH, REPLACE).</p>
+              <p>Uso típico: analytics o debugging de navegación.</p>
+              <Code>{`
+                import { useNavigationType } from "react-router-dom";
+
+                function NavigationLogger() {
+                  const navType = useNavigationType();
+                  return <p>Modo de navegación: {navType}</p>;
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useOutlet</h5>
+              <p>Qué hace: permite renderizar un componente hijo en una ruta anidada.</p>
+              <p>Uso típico: layouts compartidos con contenido dinámico.</p>
+              <Code>{`
+                import { Outlet } from "react-router-dom";
+
+                function DashboardLayout() {
+                  return (
+                    <div>
+                      <h2>Panel</h2>
+                      <Outlet /> {/* Aquí se renderiza la sub-ruta */}
+                    </div>
+                  );
+                }
+              `}</Code>
+            </section>
+            <section>
+              <h5>useSearchParams</h5>
+              <p>Qué hace: te da acceso a los parámetros de la query string (?key=value).</p>
+              <p>Uso típico: filtros, paginación, búsquedas.</p>
+              <Code>{`
+                import { useSearchParams } from "react-router-dom";
+
+                function SearchPage() {
+                  const [searchParams, setSearchParams] = useSearchParams();
+                  const query = searchParams.get("q");
+
+                  return (
+                    <div>
+                      <p>Búsqueda: {query}</p>
+                      <button onClick={() => setSearchParams({ q: "React" })}>
+                        Buscar React
+                      </button>
+                    </div>
+                  );
+                }
+              `}</Code>
+            </section>
+          </section>
+          <section>
+            <h4>Ejemplo completo:</h4>
+            <Code>{`
+              import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
+
+              function Home() {
+                return <h2>Home Page</h2>;
+              }
+
+              function About() {
+                return <h2>About Page</h2>;
+              }
+
+              function Contact() {
+                return <h2>Contact Page</h2>;
+              }
+
+              export default function App() {
+                return (
+                  <BrowserRouter>
+                    <header>
+                      <h1>Mi Aplicación</h1>
+                      <nav>
+                        <Link to="/">[Link] Home</Link>
+                        <Link to="/about">[Link] About</Link>
+                        <NavLink
+                          to="/contact"
+                          className={({ isActive }) => isActive ? "active" : ""}
+                        >
+                          [NavLink] Contact
+                        </NavLink>
+                      </nav>
+                    </header>
+
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                    </Routes>
+                  </BrowserRouter>
+                )
+              }
+            `}</Code>
+          </section>
+        </section>
+      </section>
+      <section>
+        <h2>Headless UI</h2>
+        <a href="https://www.npmjs.com/package/@headlessui/react">NPM</a>
+        <a href="https://headlessui.com/">Headless UI Docs</a>
+        <section>
+          <h3>Qué es:</h3>
+          <p>Librería de componentes sin estilos, creados por los autores de Tailwind CSS.  Proporciona la lógica y accesibilidad, pero tú decides los estilos (ideal con Tailwind).</p>
+        </section>
+        <section>
+          <h3>React</h3>
+          <section>
+            <h4>Instalación:</h4>
+            <Code>{`
+              npm install @headlessui/react
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplo completo: Menu</h4>
+            <Code>{`
+              import { Menu } from '@headlessui/react';
+
+              export default function ExampleMenu() {
+                return (
+                  <Menu>
+                    <Menu.Button className="px-4 py-2 bg-blue-500 text-white rounded">
+                      Opciones
+                    </Menu.Button>
+                    <Menu.Items className="mt-2 w-40 bg-white shadow-lg rounded">
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button
+                            className={\`block w-full text-left px-4 py-2 \${active ? 'bg-blue-100' : ''}\`}
+                          >
+                            Perfil
+                          </button>
+                        )}
+                      </Menu.Item>
+                      <Menu.Item>
+                        {({ active }) => (
+                          <button
+                            className={\`block w-full text-left px-4 py-2 \${active ? 'bg-blue-100' : ''}\`}
+                          >
+                            Configuración
+                          </button>
+                        )}
+                      </Menu.Item>
+                    </Menu.Items>
+                  </Menu>
+                );
+              }
+            `}</Code>
+          </section>
+          <section>
+            <h4>Ejemplo completo: Dialog (Modal)</h4>
+            <Code>{`
+              import { Dialog } from '@headlessui/react';
+              import { useState } from 'react';
+
+              export default function ExampleDialog() {
+                const [isOpen, setIsOpen] = useState(false);
+
+                return (
+                  <>
+                    <button 
+                      onClick={() => setIsOpen(true)} 
+                      className="bg-green-500 text-white px-4 py-2 rounded"
+                    >
+                      Abrir Modal
+                    </button>
+
+                    <Dialog open={isOpen} onClose={() => setIsOpen(false)}>
+                      <div className="fixed inset-0 bg-black/30" />
+                      <div className="fixed inset-0 flex items-center justify-center">
+                        <Dialog.Panel className="bg-white p-6 rounded shadow-lg">
+                          <Dialog.Title className="text-lg font-bold">
+                            Título del Modal
+                          </Dialog.Title>
+                          <Dialog.Description>
+                            Este es el contenido del modal.
+                          </Dialog.Description>
+                          <button 
+                            onClick={() => setIsOpen(false)} 
+                            className="mt-4 bg-red-500 text-white px-4 py-2 rounded"
+                          >
+                            Cerrar
+                          </button>
+                        </Dialog.Panel>
+                      </div>
+                    </Dialog>
+                  </>
+                );
+              }
+            `}</Code>
+          </section>
+        </section>
+        <section>
+          <h3>Ventajas</h3>
+          <ul>
+            <li>Accesibilidad incorporada (roles ARIA y manejo de foco).</li>
+            <li>Totalmente personalizable con Tailwind u otro CSS.</li>
+            <li>Componentes listos para interacciones complejas (menús, modales, tabs, acordeones, etc.).</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Desventajas</h3>
+          <ul>
+            <li>No trae estilos: requiere dar formato manualmente.</li>
+            <li>Poca utilidad si buscas componentes listos como en Bootstrap o MUI.</li>
+          </ul>
+        </section>
+      </section>
     </>
   )
 }

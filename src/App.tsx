@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import "./styles/css/app.css";
 import Index from './pages/Index';
 import Navbar from './components/Navbar';
+import Content from './components/Content';
 /*CSS*/
 import Selectors_CSS from './pages/css/Selectors_CSS';
 import Specificity_Inheritance_CSS from './pages/css/Specificity_Inheritance_CSS';
@@ -75,6 +76,11 @@ import Npm_Packages_Node from './pages/node/Npm_Packages_Node';
 /*JSON*/
 import TypeScript_JSON from './pages/json/TypeScript_JSON';
 /*JSON*/
+/*APIs*/
+import Open_Weather_APIs from './pages/APIs/Open_Weather_APIs';
+import Food_Data_Central_APIs from './pages/APIs/Food_Data_Central_APIs';
+import Free_Cocktail_APIs from './pages/APIs/Free_Cocktail_APIs';
+/*APIs*/
 /*Frontend*/
 import Vite_Frontend from './pages/frontend/Vite_Frontend';
 /*Frontend*/
@@ -92,9 +98,6 @@ import Jellies_Recipes_Bakery from './pages/bakery/Jellies_Recipes_Bakery';
 /*English*/
   /*Easy_Grammar*/
   import Question_Forms_English from './pages/english/easy/Question_Forms_English';
-import Open_Weather_APIs from './pages/APIs/Open_Weather_APIs';
-import Food_Data_Central_APIs from './pages/APIs/Food_Data_Central_APIs';
-import Content from './components/Content';
   /*Easy_Grammar*/
 /*English*/
 export default function App() {
@@ -187,6 +190,7 @@ export default function App() {
               {/*APIs*/}
               <Route path="/apis/open_weather" element={<Open_Weather_APIs />} />
               <Route path="/apis/usda_fooddata_central" element={<Food_Data_Central_APIs />} />
+              <Route path="/apis/free_cocktail" element={<Free_Cocktail_APIs />} />
               {/*APIs*/}
               {/*Frontend*/}
               <Route path="/frontend/vite" element={<Vite_Frontend />} />
