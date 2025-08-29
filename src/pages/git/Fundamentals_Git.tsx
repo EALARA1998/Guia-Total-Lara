@@ -255,6 +255,59 @@ export default function Fundamentals_Git() {
           </li>
         </ul>
       </section>
+      <section>
+        <h2>Dejar de rastrear un archivo</h2>
+        <section>
+          <h3>Caso 1: Mantener el archivo pero dejar de seguirlo</h3>
+          <p>Por ejemplo, tienes un archivo config.json que quieres seguir usando en tu computadora, pero no quieres que Git lo rastree más (ni que suba a GitHub).</p>
+          <ol>
+            <li>Quitar el archivo del seguimiento de Git (pero no borrarlo de tu carpeta):
+              <Code>{`
+                git rm --cached config.json
+              `}</Code>
+              <p>--cached = lo elimina del “índice” de Git, pero no borra el archivo de tu disco.</p>
+            </li>
+            <li>Confirmar el cambio con un commit:
+              <Code>{`
+                git commit -m "Dejar de rastrear config.json"
+              `}</Code>
+            </li>
+            <li>Opcional (pero recomendable): añadirlo a .gitignore para que Git no lo vuelva a rastrear:
+              <Code>{`
+                config.json
+              `}</Code>
+            </li>
+          </ol>
+        </section>
+        <section>
+          <h3>Caso 2: Dejar de seguir y además borrarlo del disco</h3>
+          <p>Si en cambio sí quieres que Git lo deje de seguir y además se borre de tu carpeta local, usas:</p>
+          <Code>{`
+            git rm nombre_del_archivo
+            git commit -m "Eliminar archivo del repositorio"
+          `}</Code>
+        </section>
+        <section>
+          <h3>Caso 3: Para carpetas enteras</h3>
+          <p>Si quieres dejar de seguir una carpeta completa (por ejemplo node_modules/):</p>
+          <Code>{`
+            git rm -r --cached node_modules/
+            git commit -m "Dejar de seguir node_modules/"
+          `}</Code>
+          <p>Y luego agregas en tu .gitignore:</p>
+          <Code>{`
+            node_modules/
+          `}</Code>
+        </section>
+        <section>
+          <h3>Resumen</h3>
+          <ul>
+            <li>git rm --cached archivo → deja de rastrear pero lo mantiene en tu disco.</li>
+            <li>git rm archivo → deja de rastrear y lo borra del disco.</li>
+            <li>.gitignore → evita que Git vuelva a rastrearlo.</li>
+          </ul>
+        </section>
+      </section>
     </>
   )
 }
